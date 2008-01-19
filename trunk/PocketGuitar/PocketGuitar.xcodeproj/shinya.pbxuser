@@ -1,0 +1,243 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = D92591D10C6B42C700BBDBBC /* PocketGuitar */;
+		addToTargets = (
+		);
+		breakpointsGroup = D5874D720D3B4FDE007C2565 /* XCBreakpointsBucket */;
+		codeSenseManager = D5874C380D3AEE5B007C2565 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					244,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 222403876;
+			PBXWorkspaceStateSaveDate = 222403876;
+		};
+		perUserProjectItems = {
+			D5335E620D41A309000E2595 /* PBXTextBookmark */ = D5335E620D41A309000E2595 /* PBXTextBookmark */;
+			D5335EA40D41A40A000E2595 /* PBXTextBookmark */ = D5335EA40D41A40A000E2595 /* PBXTextBookmark */;
+			D5335FD40D41AAC2000E2595 /* PBXBookmark */ = D5335FD40D41AAC2000E2595 /* PBXBookmark */;
+			D5335FDE0D41AB35000E2595 /* PBXTextBookmark */ = D5335FDE0D41AB35000E2595 /* PBXTextBookmark */;
+			D5335FDF0D41AB35000E2595 /* PBXTextBookmark */ = D5335FDF0D41AB35000E2595 /* PBXTextBookmark */;
+			D5335FE00D41AB35000E2595 /* PBXTextBookmark */ = D5335FE00D41AB35000E2595 /* PBXTextBookmark */;
+		};
+		sourceControlManager = D5874C370D3AEE5B007C2565 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{273, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{15, 125}, {838, 748}}";
+		};
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{623, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{38, 104}, {838, 748}}";
+		};
+	};
+	D506189B0D3AD61E00D191E0 /* Guitar.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 854}}";
+			sepNavSelRange = "{16, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{107, 41}, {838, 748}}";
+		};
+	};
+	D506189C0D3AD61E00D191E0 /* Guitar.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {800, 2912}}";
+			sepNavSelRange = "{33, 0}";
+			sepNavVisRect = "{{0, 2293}, {799, 619}}";
+			sepNavWindowFrame = "{{204, 78}, {838, 748}}";
+		};
+	};
+	D52F07920D264C95005DD24C /* AudioOutput.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{59, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{107, 41}, {838, 748}}";
+		};
+	};
+	D5335E620D41A309000E2595 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5335EA40D41A40A000E2595 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "AudioOutput.m: start";
+		rLen = 0;
+		rLoc = 1984;
+		rType = 0;
+		vrLen = 1514;
+		vrLoc = 0;
+	};
+	D5335FD40D41AAC2000E2595 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+	};
+	D5335FDE0D41AB35000E2595 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 9";
+		rLen = 0;
+		rLoc = 125;
+		rType = 0;
+		vrLen = 1565;
+		vrLoc = 0;
+	};
+	D5335FDF0D41AB35000E2595 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1792;
+		vrLoc = 87;
+	};
+	D5335FE00D41AB35000E2595 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D553669C0D3106AC00F7514D /* InstrumentFactory.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{27, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{130, 20}, {838, 748}}";
+		};
+	};
+	D553669D0D3106AC00F7514D /* InstrumentFactory.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 4998}}";
+			sepNavSelRange = "{28, 0}";
+			sepNavVisRect = "{{0, 4379}, {799, 619}}";
+			sepNavWindowFrame = "{{77, 130}, {838, 748}}";
+		};
+	};
+	D5536A730D3255C200F7514D /* Makefile */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1496, 826}}";
+			sepNavSelRange = "{125, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{196, 63}, {838, 748}}";
+		};
+	};
+	D55E42220D3268F200994190 /* AudioOutput.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 882}}";
+			sepNavSelRange = "{1418, 93}";
+			sepNavVisRect = "{{0, 111}, {799, 619}}";
+			sepNavWindowFrame = "{{180, 71}, {838, 748}}";
+		};
+	};
+	D5874C370D3AEE5B007C2565 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	D5874C380D3AEE5B007C2565 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D5874D720D3B4FDE007C2565 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "プロジェクトブレークポイント";
+		objects = (
+		);
+	};
+	D5B2B0CA0D1E2FD70096FA6C /* GuitarView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{463, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{130, 20}, {838, 748}}";
+		};
+	};
+	D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {944, 5950}}";
+			sepNavSelRange = "{9426, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{389, 85}, {838, 748}}";
+		};
+	};
+	D5C299950D28C123008C478D /* SettingsView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{22, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{491, -48}, {838, 748}}";
+		};
+	};
+	D5C299960D28C123008C478D /* SettingsView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1316, 4060}}";
+			sepNavSelRange = "{22, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{464, 57}, {838, 748}}";
+		};
+	};
+	D90F56B90C6719EF007AE76B /* GuitarApp.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 784}}";
+			sepNavSelRange = "{972, 0}";
+			sepNavVisRect = "{{0, 58}, {781, 488}}";
+			sepNavWindowFrame = "{{72, 98}, {838, 748}}";
+		};
+	};
+	D90F56BA0C6719EF007AE76B /* GuitarApp.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{131, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavWindowFrame = "{{468, 70}, {838, 748}}";
+		};
+	};
+	D92591D10C6B42C700BBDBBC /* PocketGuitar */ = {
+		activeExec = 0;
+	};
+}
