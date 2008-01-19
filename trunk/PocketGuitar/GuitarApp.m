@@ -1,6 +1,17 @@
 #import "GuitarApp.h"
+#include "MobileMusicPlayer/MobileMusicPlayer.h"
 
 id GSColorCreateWithDeviceWhite(float f1, float f2);
+
+typedef enum {
+	kGSFontTraitRegular = 0,
+    kGSFontTraitItalic = 1,
+    kGSFontTraitBold = 2,
+    kGSFontTraitBoldItalic = (kGSFontTraitBold | kGSFontTraitItalic)
+} GSFontTrait;
+
+id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
+
 
 @implementation GuitarApp
 
@@ -16,11 +27,30 @@ id GSColorCreateWithDeviceWhite(float f1, float f2);
 	[settingsView setDelegate:self];
 
 	AVSystemController *avsc = [AVSystemController sharedAVSystemController];
-//	float volume;
-//	NSString *name;
-//	[avsc getActiveCategoryVolume:&volume andName:&name];
-//	NSLog(@"volume=%f name=%@", volume, name);
-	[avsc setActiveCategoryVolumeTo:0.7];
+	float volume;
+	NSString *name;
+	[avsc getActiveCategoryVolume:&volume andName:&name];
+	NSLog(@"volume=%f name=%@", volume, name);
+	NSLog(@"route=%@", [avsc routeForCategory:@"Audio/Video"]);
+	
+	int playbackState = PCGetPlaybackState();
+	NSLog(@"state=%d", playbackState);
+
+	if (kPlayerPlaying != playbackState) {
+		[avsc setActiveCategoryVolumeTo:0.5];
+		AVController *avc = [AVController avController];
+		NSError *error;
+		AVItem *silence = [[AVItem alloc] initWithPath:[[NSBundle mainBundle] pathForResource :@"silence" ofType:@"wav"] error:&error];
+		[avc setCurrentItem:silence preservingRate:NO];
+		[avc setCurrentTime:0.0];
+		[avc play:nil];
+		[avc pause];
+//		[avc release];
+/*	[avc setVolume:0.8];
+//	[avc pause];
+*/
+	}
+	
 	transition = [[UITransitionView alloc] initWithFrame:[window bounds]];
 	[mainView addSubview: transition];	
 	
@@ -32,6 +62,7 @@ id GSColorCreateWithDeviceWhite(float f1, float f2);
 	[pushButton setDrawsShadow: YES];
 	[pushButton setEnabled:YES];  //may not be needed
 	[pushButton setStretchBackground:YES];
+	[pushButton setTitleFont:(struct __GSFont*)GSFontCreateWithName("Helvetica", kGSFontTraitBold, 15.0f)];
 	[pushButton addTarget:self action:@selector(showSettings) forEvents:1];
 
 	[guitarView addSubview:pushButton];

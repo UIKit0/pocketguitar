@@ -30,16 +30,205 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 222403876;
-			PBXWorkspaceStateSaveDate = 222403876;
+			PBXPerProjectTemplateStateSaveDate = 222408287;
+			PBXWorkspaceStateSaveDate = 222408287;
 		};
 		perUserProjectItems = {
-			D5335E620D41A309000E2595 /* PBXTextBookmark */ = D5335E620D41A309000E2595 /* PBXTextBookmark */;
-			D5335EA40D41A40A000E2595 /* PBXTextBookmark */ = D5335EA40D41A40A000E2595 /* PBXTextBookmark */;
-			D5335FD40D41AAC2000E2595 /* PBXBookmark */ = D5335FD40D41AAC2000E2595 /* PBXBookmark */;
-			D5335FDE0D41AB35000E2595 /* PBXTextBookmark */ = D5335FDE0D41AB35000E2595 /* PBXTextBookmark */;
-			D5335FDF0D41AB35000E2595 /* PBXTextBookmark */ = D5335FDF0D41AB35000E2595 /* PBXTextBookmark */;
-			D5335FE00D41AB35000E2595 /* PBXTextBookmark */ = D5335FE00D41AB35000E2595 /* PBXTextBookmark */;
+			D5335E620D41A309000E2595 = D5335E620D41A309000E2595 /* PBXTextBookmark */;
+			D5335EA40D41A40A000E2595 = D5335EA40D41A40A000E2595 /* PBXTextBookmark */;
+			D5335FD40D41AAC2000E2595 = D5335FD40D41AAC2000E2595 /* PBXBookmark */;
+			D5335FDE0D41AB35000E2595 = D5335FDE0D41AB35000E2595 /* PBXTextBookmark */;
+			D5335FDF0D41AB35000E2595 = D5335FDF0D41AB35000E2595 /* PBXTextBookmark */;
+			D5335FE00D41AB35000E2595 = D5335FE00D41AB35000E2595 /* PBXTextBookmark */;
+			D5BF50AC0D41AE6700098B6E /* PBXBookmark */ = D5BF50AC0D41AE6700098B6E /* PBXBookmark */;
+			D5BF50EE0D41BE7900098B6E /* PBXBookmark */ = D5BF50EE0D41BE7900098B6E /* PBXBookmark */;
+			D5BF51A50D41DFE800098B6E /* PBXTextBookmark */ = D5BF51A50D41DFE800098B6E /* PBXTextBookmark */;
+			D5BF51A60D41DFE800098B6E /* PBXTextBookmark */ = D5BF51A60D41DFE800098B6E /* PBXTextBookmark */;
+			D5BF51A70D41DFE800098B6E /* PBXTextBookmark */ = D5BF51A70D41DFE800098B6E /* PBXTextBookmark */;
+			D5BF51A80D41DFE800098B6E /* PBXTextBookmark */ = D5BF51A80D41DFE800098B6E /* PBXTextBookmark */;
+			D5BF51AF0D41DFEC00098B6E /* PBXBookmark */ = D5BF51AF0D41DFEC00098B6E /* PBXBookmark */;
+			D5BF51B40D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51B40D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51B70D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51B70D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51B80D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51B80D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51BB0D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51BB0D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51BC0D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51BC0D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51BF0D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51BF0D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51C00D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51C00D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51C30D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51C30D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51C40D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51C40D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51C70D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51C70D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51C80D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51C80D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51CB0D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51CB0D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51CE0D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51CE0D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51CF0D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51CF0D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51D00D41DFEF00098B6E /* PBXTextBookmark */ = D5BF51D00D41DFEF00098B6E /* PBXTextBookmark */;
+			D5BF51D30D41DFF400098B6E /* PBXBookmark */ = D5BF51D30D41DFF400098B6E /* PBXBookmark */;
+			D5BF51D70D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51D70D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51D80D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51D80D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51D90D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51D90D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51DA0D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51DA0D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51DB0D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51DB0D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51DC0D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51DC0D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51DD0D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51DD0D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51DE0D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51DE0D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51DF0D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51DF0D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51E00D41DFFE00098B6E /* PBXTextBookmark */ = D5BF51E00D41DFFE00098B6E /* PBXTextBookmark */;
+			D5BF51E50D41E02B00098B6E /* PBXTextBookmark */ = D5BF51E50D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51E60D41E02B00098B6E /* PBXTextBookmark */ = D5BF51E60D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51E70D41E02B00098B6E /* PBXTextBookmark */ = D5BF51E70D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51E80D41E02B00098B6E /* PBXTextBookmark */ = D5BF51E80D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51E90D41E02B00098B6E /* PBXTextBookmark */ = D5BF51E90D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51EA0D41E02B00098B6E /* PBXTextBookmark */ = D5BF51EA0D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51EB0D41E02B00098B6E /* PBXTextBookmark */ = D5BF51EB0D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51EC0D41E02B00098B6E /* PBXTextBookmark */ = D5BF51EC0D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51ED0D41E02B00098B6E /* PBXTextBookmark */ = D5BF51ED0D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51EE0D41E02B00098B6E /* PBXTextBookmark */ = D5BF51EE0D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51EF0D41E02B00098B6E /* PBXTextBookmark */ = D5BF51EF0D41E02B00098B6E /* PBXTextBookmark */;
+			D5BF51F30D41E15F00098B6E /* PBXTextBookmark */ = D5BF51F30D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51F40D41E15F00098B6E /* PBXTextBookmark */ = D5BF51F40D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51F50D41E15F00098B6E /* PBXTextBookmark */ = D5BF51F50D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51F60D41E15F00098B6E /* PBXTextBookmark */ = D5BF51F60D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51F70D41E15F00098B6E /* PBXTextBookmark */ = D5BF51F70D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51F80D41E15F00098B6E /* PBXTextBookmark */ = D5BF51F80D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51F90D41E15F00098B6E /* PBXTextBookmark */ = D5BF51F90D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51FA0D41E15F00098B6E /* PBXTextBookmark */ = D5BF51FA0D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51FB0D41E15F00098B6E /* PBXTextBookmark */ = D5BF51FB0D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51FC0D41E15F00098B6E /* PBXTextBookmark */ = D5BF51FC0D41E15F00098B6E /* PBXTextBookmark */;
+			D5BF51FF0D41E16A00098B6E /* PBXTextBookmark */ = D5BF51FF0D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52000D41E16A00098B6E /* PBXTextBookmark */ = D5BF52000D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52010D41E16A00098B6E /* PBXTextBookmark */ = D5BF52010D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52020D41E16A00098B6E /* PBXTextBookmark */ = D5BF52020D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52030D41E16A00098B6E /* PBXTextBookmark */ = D5BF52030D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52040D41E16A00098B6E /* PBXTextBookmark */ = D5BF52040D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52050D41E16A00098B6E /* PBXTextBookmark */ = D5BF52050D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52060D41E16A00098B6E /* PBXTextBookmark */ = D5BF52060D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52070D41E16A00098B6E /* PBXTextBookmark */ = D5BF52070D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF52080D41E16A00098B6E /* PBXTextBookmark */ = D5BF52080D41E16A00098B6E /* PBXTextBookmark */;
+			D5BF520B0D41E17E00098B6E /* PBXTextBookmark */ = D5BF520B0D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF520C0D41E17E00098B6E /* PBXTextBookmark */ = D5BF520C0D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF520D0D41E17E00098B6E /* PBXTextBookmark */ = D5BF520D0D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF520E0D41E17E00098B6E /* PBXTextBookmark */ = D5BF520E0D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF520F0D41E17E00098B6E /* PBXTextBookmark */ = D5BF520F0D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF52100D41E17E00098B6E /* PBXTextBookmark */ = D5BF52100D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF52110D41E17E00098B6E /* PBXTextBookmark */ = D5BF52110D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF52120D41E17E00098B6E /* PBXTextBookmark */ = D5BF52120D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF52130D41E17E00098B6E /* PBXTextBookmark */ = D5BF52130D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF52140D41E17E00098B6E /* PBXTextBookmark */ = D5BF52140D41E17E00098B6E /* PBXTextBookmark */;
+			D5BF52170D41E1DD00098B6E /* PBXTextBookmark */ = D5BF52170D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF52180D41E1DD00098B6E /* PBXTextBookmark */ = D5BF52180D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF52190D41E1DD00098B6E /* PBXTextBookmark */ = D5BF52190D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF521A0D41E1DD00098B6E /* PBXTextBookmark */ = D5BF521A0D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF521B0D41E1DD00098B6E /* PBXTextBookmark */ = D5BF521B0D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF521C0D41E1DD00098B6E /* PBXTextBookmark */ = D5BF521C0D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF521D0D41E1DD00098B6E /* PBXTextBookmark */ = D5BF521D0D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF521E0D41E1DD00098B6E /* PBXTextBookmark */ = D5BF521E0D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF521F0D41E1DD00098B6E /* PBXTextBookmark */ = D5BF521F0D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF52200D41E1DD00098B6E /* PBXTextBookmark */ = D5BF52200D41E1DD00098B6E /* PBXTextBookmark */;
+			D5BF52230D41E21E00098B6E /* PBXTextBookmark */ = D5BF52230D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF52240D41E21E00098B6E /* PBXTextBookmark */ = D5BF52240D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF52250D41E21E00098B6E /* PBXTextBookmark */ = D5BF52250D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF52260D41E21E00098B6E /* PBXTextBookmark */ = D5BF52260D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF52270D41E21E00098B6E /* PBXTextBookmark */ = D5BF52270D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF52280D41E21E00098B6E /* PBXTextBookmark */ = D5BF52280D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF52290D41E21E00098B6E /* PBXTextBookmark */ = D5BF52290D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF522A0D41E21E00098B6E /* PBXTextBookmark */ = D5BF522A0D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF522B0D41E21E00098B6E /* PBXTextBookmark */ = D5BF522B0D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF522C0D41E21E00098B6E /* PBXTextBookmark */ = D5BF522C0D41E21E00098B6E /* PBXTextBookmark */;
+			D5BF522F0D41E29900098B6E /* PBXTextBookmark */ = D5BF522F0D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52300D41E29900098B6E /* PBXTextBookmark */ = D5BF52300D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52310D41E29900098B6E /* PBXTextBookmark */ = D5BF52310D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52320D41E29900098B6E /* PBXTextBookmark */ = D5BF52320D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52330D41E29900098B6E /* PBXTextBookmark */ = D5BF52330D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52340D41E29900098B6E /* PBXTextBookmark */ = D5BF52340D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52350D41E29900098B6E /* PBXTextBookmark */ = D5BF52350D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52360D41E29900098B6E /* PBXTextBookmark */ = D5BF52360D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52370D41E29900098B6E /* PBXTextBookmark */ = D5BF52370D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52380D41E29900098B6E /* PBXTextBookmark */ = D5BF52380D41E29900098B6E /* PBXTextBookmark */;
+			D5BF52460D41E2E700098B6E /* PBXTextBookmark */ = D5BF52460D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF52470D41E2E700098B6E /* PBXTextBookmark */ = D5BF52470D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF52480D41E2E700098B6E /* PBXTextBookmark */ = D5BF52480D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF52490D41E2E700098B6E /* PBXTextBookmark */ = D5BF52490D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF524A0D41E2E700098B6E /* PBXTextBookmark */ = D5BF524A0D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF524B0D41E2E700098B6E /* PBXTextBookmark */ = D5BF524B0D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF524C0D41E2E700098B6E /* PBXTextBookmark */ = D5BF524C0D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF524D0D41E2E700098B6E /* PBXTextBookmark */ = D5BF524D0D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF524E0D41E2E700098B6E /* PBXTextBookmark */ = D5BF524E0D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF524F0D41E2E700098B6E /* PBXTextBookmark */ = D5BF524F0D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF52500D41E2E700098B6E /* PBXTextBookmark */ = D5BF52500D41E2E700098B6E /* PBXTextBookmark */;
+			D5BF52560D41E34100098B6E /* PBXTextBookmark */ = D5BF52560D41E34100098B6E /* PBXTextBookmark */;
+			D5BF52570D41E34100098B6E /* PBXTextBookmark */ = D5BF52570D41E34100098B6E /* PBXTextBookmark */;
+			D5BF52580D41E34100098B6E /* PBXTextBookmark */ = D5BF52580D41E34100098B6E /* PBXTextBookmark */;
+			D5BF52590D41E34100098B6E /* PBXTextBookmark */ = D5BF52590D41E34100098B6E /* PBXTextBookmark */;
+			D5BF525A0D41E34100098B6E /* PBXTextBookmark */ = D5BF525A0D41E34100098B6E /* PBXTextBookmark */;
+			D5BF525B0D41E34100098B6E /* PBXTextBookmark */ = D5BF525B0D41E34100098B6E /* PBXTextBookmark */;
+			D5BF525C0D41E34100098B6E /* PBXTextBookmark */ = D5BF525C0D41E34100098B6E /* PBXTextBookmark */;
+			D5BF525D0D41E34100098B6E /* PBXTextBookmark */ = D5BF525D0D41E34100098B6E /* PBXTextBookmark */;
+			D5BF525E0D41E34100098B6E /* PBXTextBookmark */ = D5BF525E0D41E34100098B6E /* PBXTextBookmark */;
+			D5BF525F0D41E34100098B6E /* PBXTextBookmark */ = D5BF525F0D41E34100098B6E /* PBXTextBookmark */;
+			D5BF52600D41E34100098B6E /* PBXTextBookmark */ = D5BF52600D41E34100098B6E /* PBXTextBookmark */;
+			D5BF52640D41E36A00098B6E /* PBXTextBookmark */ = D5BF52640D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF52650D41E36A00098B6E /* PBXTextBookmark */ = D5BF52650D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF52660D41E36A00098B6E /* PBXTextBookmark */ = D5BF52660D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF52670D41E36A00098B6E /* PBXTextBookmark */ = D5BF52670D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF52680D41E36A00098B6E /* PBXTextBookmark */ = D5BF52680D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF52690D41E36A00098B6E /* PBXTextBookmark */ = D5BF52690D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF526A0D41E36A00098B6E /* PBXTextBookmark */ = D5BF526A0D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF526B0D41E36A00098B6E /* PBXTextBookmark */ = D5BF526B0D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF526C0D41E36A00098B6E /* PBXTextBookmark */ = D5BF526C0D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF526D0D41E36A00098B6E /* PBXTextBookmark */ = D5BF526D0D41E36A00098B6E /* PBXTextBookmark */;
+			D5BF52730D41E38300098B6E /* PBXTextBookmark */ = D5BF52730D41E38300098B6E /* PBXTextBookmark */;
+			D5BF52740D41E38300098B6E /* PBXTextBookmark */ = D5BF52740D41E38300098B6E /* PBXTextBookmark */;
+			D5BF52750D41E38300098B6E /* PBXTextBookmark */ = D5BF52750D41E38300098B6E /* PBXTextBookmark */;
+			D5BF52760D41E38300098B6E /* PBXTextBookmark */ = D5BF52760D41E38300098B6E /* PBXTextBookmark */;
+			D5BF52770D41E38300098B6E /* PBXTextBookmark */ = D5BF52770D41E38300098B6E /* PBXTextBookmark */;
+			D5BF52780D41E38300098B6E /* PBXTextBookmark */ = D5BF52780D41E38300098B6E /* PBXTextBookmark */;
+			D5BF52790D41E38300098B6E /* PBXTextBookmark */ = D5BF52790D41E38300098B6E /* PBXTextBookmark */;
+			D5BF527A0D41E38300098B6E /* PBXTextBookmark */ = D5BF527A0D41E38300098B6E /* PBXTextBookmark */;
+			D5BF527B0D41E38300098B6E /* PBXTextBookmark */ = D5BF527B0D41E38300098B6E /* PBXTextBookmark */;
+			D5BF527C0D41E38300098B6E /* PBXTextBookmark */ = D5BF527C0D41E38300098B6E /* PBXTextBookmark */;
+			D5BF52810D41E3A800098B6E /* PBXTextBookmark */ = D5BF52810D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52820D41E3A800098B6E /* PBXTextBookmark */ = D5BF52820D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52830D41E3A800098B6E /* PBXTextBookmark */ = D5BF52830D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52840D41E3A800098B6E /* PBXTextBookmark */ = D5BF52840D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52850D41E3A800098B6E /* PBXTextBookmark */ = D5BF52850D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52860D41E3A800098B6E /* PBXTextBookmark */ = D5BF52860D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52870D41E3A800098B6E /* PBXTextBookmark */ = D5BF52870D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52880D41E3A800098B6E /* PBXTextBookmark */ = D5BF52880D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF52890D41E3A800098B6E /* PBXTextBookmark */ = D5BF52890D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF528A0D41E3A800098B6E /* PBXTextBookmark */ = D5BF528A0D41E3A800098B6E /* PBXTextBookmark */;
+			D5BF528C0D41EEE700098B6E /* PBXTextBookmark */ = D5BF528C0D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF528D0D41EEE700098B6E /* PBXTextBookmark */ = D5BF528D0D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF528E0D41EEE700098B6E /* PBXTextBookmark */ = D5BF528E0D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF528F0D41EEE700098B6E /* PBXTextBookmark */ = D5BF528F0D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF52900D41EEE700098B6E /* PBXTextBookmark */ = D5BF52900D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF52910D41EEE700098B6E /* PBXTextBookmark */ = D5BF52910D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF52920D41EEE700098B6E /* PBXTextBookmark */ = D5BF52920D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF52930D41EEE700098B6E /* PBXTextBookmark */ = D5BF52930D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF52940D41EEE700098B6E /* PBXTextBookmark */ = D5BF52940D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF52950D41EEE700098B6E /* PBXTextBookmark */ = D5BF52950D41EEE700098B6E /* PBXTextBookmark */;
+			D5BF529B0D41EF5300098B6E /* PBXTextBookmark */ = D5BF529B0D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF529C0D41EF5300098B6E /* PBXTextBookmark */ = D5BF529C0D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF529D0D41EF5300098B6E /* PBXTextBookmark */ = D5BF529D0D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF529E0D41EF5300098B6E /* PBXTextBookmark */ = D5BF529E0D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF529F0D41EF5300098B6E /* PBXTextBookmark */ = D5BF529F0D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52A00D41EF5300098B6E /* PBXTextBookmark */ = D5BF52A00D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52A10D41EF5300098B6E /* PBXTextBookmark */ = D5BF52A10D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52A20D41EF5300098B6E /* PBXTextBookmark */ = D5BF52A20D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52A30D41EF5300098B6E /* PBXTextBookmark */ = D5BF52A30D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52A40D41EF5300098B6E /* PBXTextBookmark */ = D5BF52A40D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52A50D41EF5300098B6E /* PBXTextBookmark */ = D5BF52A50D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52A60D41EF5300098B6E /* PBXTextBookmark */ = D5BF52A60D41EF5300098B6E /* PBXTextBookmark */;
+			D5BF52AC0D41F06300098B6E /* PBXTextBookmark */ = D5BF52AC0D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52AD0D41F06300098B6E /* PBXTextBookmark */ = D5BF52AD0D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52AE0D41F06300098B6E /* PBXTextBookmark */ = D5BF52AE0D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52AF0D41F06300098B6E /* PBXTextBookmark */ = D5BF52AF0D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52B00D41F06300098B6E /* PBXTextBookmark */ = D5BF52B00D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52B10D41F06300098B6E /* PBXTextBookmark */ = D5BF52B10D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52B20D41F06300098B6E /* PBXTextBookmark */ = D5BF52B20D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52B30D41F06300098B6E /* PBXTextBookmark */ = D5BF52B30D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52B40D41F06300098B6E /* PBXTextBookmark */ = D5BF52B40D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52B50D41F06300098B6E /* PBXTextBookmark */ = D5BF52B50D41F06300098B6E /* PBXTextBookmark */;
+			D5BF52B60D41F06300098B6E /* PBXTextBookmark */ = D5BF52B60D41F06300098B6E /* PBXTextBookmark */;
 		};
 		sourceControlManager = D5874C370D3AEE5B007C2565 /* Source Control */;
 		userBuildSettings = {
@@ -63,17 +252,17 @@
 	};
 	D506189B0D3AD61E00D191E0 /* Guitar.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {799, 854}}";
-			sepNavSelRange = "{16, 0}";
-			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavIntBoundsRect = "{{0, 0}, {799, 868}}";
+			sepNavSelRange = "{922, 0}";
+			sepNavVisRect = "{{0, 235}, {799, 619}}";
 			sepNavWindowFrame = "{{107, 41}, {838, 748}}";
 		};
 	};
 	D506189C0D3AD61E00D191E0 /* Guitar.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {800, 2912}}";
-			sepNavSelRange = "{33, 0}";
-			sepNavVisRect = "{{0, 2293}, {799, 619}}";
+			sepNavIntBoundsRect = "{{0, 0}, {800, 3010}}";
+			sepNavSelRange = "{3727, 0}";
+			sepNavVisRect = "{{0, 2176}, {799, 619}}";
 			sepNavWindowFrame = "{{204, 78}, {838, 748}}";
 		};
 	};
@@ -150,24 +339,24 @@
 	D553669D0D3106AC00F7514D /* InstrumentFactory.mm */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {938, 4998}}";
-			sepNavSelRange = "{28, 0}";
-			sepNavVisRect = "{{0, 4379}, {799, 619}}";
+			sepNavSelRange = "{8100, 0}";
+			sepNavVisRect = "{{0, 0}, {799, 619}}";
 			sepNavWindowFrame = "{{77, 130}, {838, 748}}";
 		};
 	};
 	D5536A730D3255C200F7514D /* Makefile */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1496, 826}}";
-			sepNavSelRange = "{125, 0}";
-			sepNavVisRect = "{{0, 0}, {799, 619}}";
-			sepNavWindowFrame = "{{196, 63}, {838, 748}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1610, 882}}";
+			sepNavSelRange = "{1295, 0}";
+			sepNavVisRect = "{{0, 138}, {799, 619}}";
+			sepNavWindowFrame = "{{399, 47}, {838, 748}}";
 		};
 	};
 	D55E42220D3268F200994190 /* AudioOutput.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {799, 882}}";
 			sepNavSelRange = "{1418, 93}";
-			sepNavVisRect = "{{0, 111}, {799, 619}}";
+			sepNavVisRect = "{{0, 98}, {799, 619}}";
 			sepNavWindowFrame = "{{180, 71}, {838, 748}}";
 		};
 	};
@@ -200,10 +389,1874 @@
 	D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {944, 5950}}";
-			sepNavSelRange = "{9426, 0}";
-			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavSelRange = "{1275, 0}";
+			sepNavVisRect = "{{0, 496}, {799, 619}}";
 			sepNavWindowFrame = "{{389, 85}, {838, 748}}";
 		};
+	};
+	D5BF50AC0D41AE6700098B6E /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+	};
+	D5BF50EE0D41BE7900098B6E /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+	};
+	D5BF51A50D41DFE800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "#import \"AudioQueue.h\"";
+		rLen = 23;
+		rLoc = 88;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF51A60D41DFE800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: unused variable 'playbackState'";
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		rLen = 0;
+		rLoc = 37;
+		rType = 1;
+	};
+	D5BF51A70D41DFE800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "#import \"AudioQueue.h\"";
+		rLen = 23;
+		rLoc = 88;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF51A80D41DFE800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 46";
+		rLen = 0;
+		rLoc = 1591;
+		rType = 0;
+		vrLen = 494;
+		vrLoc = 1223;
+	};
+	D5BF51AF0D41DFEC00098B6E /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+	};
+	D5BF51B40D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 62";
+		rLen = 0;
+		rLoc = 2103;
+		rType = 0;
+		vrLen = 1364;
+		vrLoc = 674;
+	};
+	D5BF51B70D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 38";
+		rLen = 0;
+		rLoc = 1179;
+		rType = 0;
+		vrLen = 1957;
+		vrLoc = 405;
+	};
+	D5BF51B80D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF51BB0D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF51BC0D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF51BF0D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 347";
+		rLen = 0;
+		rLoc = 8081;
+		rType = 0;
+		vrLen = 1458;
+		vrLoc = 7320;
+	};
+	D5BF51C00D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF51C30D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: 3";
+		rLen = 0;
+		rLoc = 16;
+		rType = 0;
+		vrLen = 667;
+		vrLoc = 54;
+	};
+	D5BF51C40D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF51C70D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF51C80D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF51CB0D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF51CE0D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 112";
+		rLen = 0;
+		rLoc = 2423;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 1396;
+	};
+	D5BF51CF0D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF51D00D41DFEF00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF51D30D41DFF400098B6E /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+	};
+	D5BF51D70D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF51D80D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF51D90D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF51DA0D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF51DB0D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF51DC0D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF51DD0D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF51DE0D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 112";
+		rLen = 0;
+		rLoc = 2423;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 1396;
+	};
+	D5BF51DF0D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF51E00D41DFFE00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF51E50D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 112";
+		rLen = 0;
+		rLoc = 2423;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 1396;
+	};
+	D5BF51E60D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 47";
+		rLen = 0;
+		rLoc = 1300;
+		rType = 0;
+		vrLen = 1145;
+		vrLoc = 388;
+	};
+	D5BF51E70D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF51E80D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF51E90D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF51EA0D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF51EB0D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF51EC0D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF51ED0D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF51EE0D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF51EF0D41E02B00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF51F30D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 52";
+		rLen = 0;
+		rLoc = 1300;
+		rType = 0;
+		vrLen = 1098;
+		vrLoc = 534;
+	};
+	D5BF51F40D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF51F50D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF51F60D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF51F70D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF51F80D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF51F90D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF51FA0D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF51FB0D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF51FC0D41E15F00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF51FF0D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 41";
+		rLen = 0;
+		rLoc = 768;
+		rType = 0;
+		vrLen = 1073;
+		vrLoc = 534;
+	};
+	D5BF52000D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52010D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52020D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52030D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52040D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52050D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF52060D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF52070D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52080D41E16A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF520B0D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 43";
+		rLen = 0;
+		rLoc = 1016;
+		rType = 0;
+		vrLen = 1030;
+		vrLoc = 534;
+	};
+	D5BF520C0D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF520D0D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF520E0D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF520F0D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52100D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52110D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF52120D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF52130D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52140D41E17E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52170D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 46";
+		rLen = 0;
+		rLoc = 997;
+		rType = 0;
+		vrLen = 1090;
+		vrLoc = 534;
+	};
+	D5BF52180D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52190D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF521A0D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF521B0D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF521C0D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF521D0D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF521E0D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF521F0D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52200D41E1DD00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52230D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 49";
+		rLen = 0;
+		rLoc = 1300;
+		rType = 0;
+		vrLen = 1094;
+		vrLoc = 592;
+	};
+	D5BF52240D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52250D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52260D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52270D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52280D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52290D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF522A0D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF522B0D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF522C0D41E21E00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF522F0D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 57";
+		rLen = 0;
+		rLoc = 1300;
+		rType = 0;
+		vrLen = 1228;
+		vrLoc = 592;
+	};
+	D5BF52300D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52310D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52320D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52330D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52340D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52350D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF52360D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF52370D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52380D41E29900098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52460D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52470D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52480D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 21";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 0;
+	};
+	D5BF52490D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF524A0D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF524B0D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF524C0D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF524D0D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF524E0D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF524F0D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52500D41E2E700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52560D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 25";
+		rLen = 0;
+		rLoc = 945;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52570D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 17";
+		rLen = 0;
+		rLoc = 398;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52580D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 21";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 0;
+	};
+	D5BF52590D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF525A0D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF525B0D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF525C0D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF525D0D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF525E0D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF525F0D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52600D41E34100098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52640D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 17";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 1677;
+		vrLoc = 0;
+	};
+	D5BF52650D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 21";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 0;
+	};
+	D5BF52660D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52670D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52680D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52690D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF526A0D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF526B0D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF526C0D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF526D0D41E36A00098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52730D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 17";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	D5BF52740D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 21";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 0;
+	};
+	D5BF52750D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52760D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52770D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52780D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52790D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF527A0D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF527B0D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF527C0D41E38300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52810D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 36";
+		rLen = 0;
+		rLoc = 1413;
+		rType = 0;
+		vrLen = 1702;
+		vrLoc = 0;
+	};
+	D5BF52820D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 21";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 890;
+		vrLoc = 0;
+	};
+	D5BF52830D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52840D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52850D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52860D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52870D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF52880D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF52890D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF528A0D41E3A800098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF528C0D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 62";
+		rLen = 0;
+		rLoc = 2135;
+		rType = 0;
+		vrLen = 1699;
+		vrLoc = 0;
+	};
+	D5BF528D0D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 357";
+		rLen = 0;
+		rLoc = 8100;
+		rType = 0;
+		vrLen = 1051;
+		vrLoc = 0;
+	};
+	D5BF528E0D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF528F0D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52900D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52910D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52920D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF52930D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF52940D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52950D41EEE700098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF529B0D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 16";
+		rLen = 0;
+		rLoc = 397;
+		rType = 0;
+		vrLen = 1699;
+		vrLoc = 0;
+	};
+	D5BF529C0D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 34";
+		rLen = 0;
+		rLoc = 1295;
+		rType = 0;
+		vrLen = 1877;
+		vrLoc = 147;
+	};
+	D5BF529D0D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 357";
+		rLen = 0;
+		rLoc = 8100;
+		rType = 0;
+		vrLen = 1051;
+		vrLoc = 0;
+	};
+	D5BF529E0D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 357";
+		rLen = 0;
+		rLoc = 8100;
+		rType = 0;
+		vrLen = 1051;
+		vrLoc = 0;
+	};
+	D5BF529F0D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52A00D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52A10D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52A20D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52A30D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF52A40D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF52A50D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52A60D41EF5300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	D5BF52AC0D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 175";
+		rLen = 0;
+		rLoc = 3615;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 3549;
+	};
+	D5BF52AD0D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189C0D3AD61E00D191E0 /* Guitar.mm */;
+		name = "Guitar.mm: 179";
+		rLen = 0;
+		rLoc = 3727;
+		rType = 0;
+		vrLen = 1158;
+		vrLoc = 3246;
+	};
+	D5BF52AE0D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5536A730D3255C200F7514D /* Makefile */;
+		name = "Makefile: 34";
+		rLen = 0;
+		rLoc = 1295;
+		rType = 0;
+		vrLen = 1877;
+		vrLoc = 147;
+	};
+	D5BF52AF0D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D553669D0D3106AC00F7514D /* InstrumentFactory.mm */;
+		name = "InstrumentFactory.mm: 357";
+		rLen = 0;
+		rLoc = 8100;
+		rType = 0;
+		vrLen = 1051;
+		vrLoc = 0;
+	};
+	D5BF52B00D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56B90C6719EF007AE76B /* GuitarApp.m */;
+		name = "GuitarApp.m: 47";
+		rLen = 0;
+		rLoc = 1617;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 404;
+	};
+	D5BF52B10D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */;
+		name = "GuitarView.m: 70";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 615;
+	};
+	D5BF52B20D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D506189B0D3AD61E00D191E0 /* Guitar.h */;
+		name = "Guitar.h: volume";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 213;
+	};
+	D5BF52B30D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D5C299960D28C123008C478D /* SettingsView.m */;
+		name = "SettingsView.m: 85";
+		rLen = 0;
+		rLoc = 2909;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 1262;
+	};
+	D5BF52B40D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D90F56BA0C6719EF007AE76B /* GuitarApp.h */;
+		name = "GuitarApp.h: 9";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 427;
+		vrLoc = 0;
+	};
+	D5BF52B50D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D55E42220D3268F200994190 /* AudioOutput.m */;
+		name = "[NSException raise:@\"AudioOutputError\" format:@\"AudioQueueSetParameter failed: %d\", status];";
+		rLen = 93;
+		rLoc = 1418;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 87;
+	};
+	D5BF52B60D41F06300098B6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D52F07920D264C95005DD24C /* AudioOutput.h */;
+		name = "AudioOutput.h: 5";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
 	};
 	D5C299950D28C123008C478D /* SettingsView.h */ = {
 		uiCtxt = {
@@ -215,24 +2268,24 @@
 	};
 	D5C299960D28C123008C478D /* SettingsView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1316, 4060}}";
-			sepNavSelRange = "{22, 0}";
-			sepNavVisRect = "{{0, 0}, {799, 619}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1316, 4116}}";
+			sepNavSelRange = "{2909, 0}";
+			sepNavVisRect = "{{0, 732}, {799, 619}}";
 			sepNavWindowFrame = "{{464, 57}, {838, 748}}";
 		};
 	};
 	D90F56B90C6719EF007AE76B /* GuitarApp.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {781, 784}}";
-			sepNavSelRange = "{972, 0}";
-			sepNavVisRect = "{{0, 58}, {781, 488}}";
+			sepNavIntBoundsRect = "{{0, 0}, {830, 1218}}";
+			sepNavSelRange = "{1617, 0}";
+			sepNavVisRect = "{{0, 228}, {799, 619}}";
 			sepNavWindowFrame = "{{72, 98}, {838, 748}}";
 		};
 	};
 	D90F56BA0C6719EF007AE76B /* GuitarApp.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {799, 619}}";
-			sepNavSelRange = "{131, 0}";
+			sepNavSelRange = "{257, 0}";
 			sepNavVisRect = "{{0, 0}, {799, 619}}";
 			sepNavWindowFrame = "{{468, 70}, {838, 748}}";
 		};

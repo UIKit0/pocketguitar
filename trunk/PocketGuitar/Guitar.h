@@ -55,6 +55,7 @@
 
 - (PluckedString*)stringAtIndex:(int)i;
 - (void)reloadInstruments:(InstrumentFactory*)factory;
+- (float)volume;
 - (void)setVolume:(float)volume;
 
 @end

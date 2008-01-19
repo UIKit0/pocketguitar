@@ -150,8 +150,11 @@ void VoicerManagingInstruments::clearInstruments() {
 	[_lock lock];
     int i;
     for (i = 0; i < frames; i++){
-//		float sample = _effect->tick(_voicer->tick() * 2) * _volume;
 		float sample = ((VoicerManagingInstruments*)_voicer)->fastTick() * 0.5 * _volume;
+//		float sample = _voicer->tick() * 2 * _volume;
+		if (_effect) {
+			sample = _effect->tick(sample);
+		}
 		if (sample < -1.0) {
 			sample = -1.0;
 		} else if (sample > 1.0) {
@@ -169,10 +172,10 @@ static float stringNotes[] = {-5, 0, 5, 10, 14, 19};
 
 - (id)init {
 	Stk::setSampleRate(SAMPLING_RATE);
-	_volume = 0.8;
+	_volume = 0.5;
 	_voicer = new VoicerManagingInstruments(1.0);
-//	_effect = new PRCRev(0.5);
 	_lock = [[NSLock alloc] init];
+//	_effect = new PRCRev(0.5);
 //	_effect = new Chorus();
 	int i;
 	for (i = 0; i < CHANNELS; i++) {
@@ -199,6 +202,10 @@ static float stringNotes[] = {-5, 0, 5, 10, 14, 19};
 
 - (PluckedString*)stringAtIndex:(int)i {
 	return _strings[i];
+}
+
+- (float)volume {
+	return _volume;
 }
 
 - (void)setVolume:(float)volume {
