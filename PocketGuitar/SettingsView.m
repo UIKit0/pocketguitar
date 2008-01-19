@@ -72,9 +72,13 @@
 	[about appendString:@"<div>Copyright (C) 2008 Shinya Kasatani [kasatani at gmail.com]</div>"];
 	[about appendString:@"<hr/>"];
 	[about appendString:@"<div>PocketGuitar uses following sample packs from the Freesound Project: http://freesound.iua.upf.edu/. These samples are licensed under Creative Commons Sampling Plus 1.0 license.</div>"];
-	[about appendString:@"<ul><li>643_SpeedY_Distorted_Guitar_Single_Notes</li><li>2774_Corsica_S_Old_Fender_P_Bass</li></ul>"];
+	[about appendString:@"<ul>"];
+	[about appendString:@"<li>\"Distorted Guitar Single Notes\" by SpeedY</li>"];
+	[about appendString:@"<li>\"AcousticElectricGuitarOpenStrings\" by casualdave</li>"];
+	[about appendString:@"<li>\"Old Fender P-Bass\" by Corsica_S</li>"];
+	[about appendString:@"</ul>"];
 	[about appendString:@"<hr/>"];
-	[about appendString:@"<div>PocketGuitar uses The Synthesis ToolKit in C++ (STK): http://ccrma.stanford.edu/software/stk/"];
+	[about appendString:@"<div>PocketGuitar uses The Synthesis ToolKit in C++ (STK) by Perry R. Cook and Gary P. Scavone: http://ccrma.stanford.edu/software/stk/"];
 	[_textView setHTML:about];
 	[_textView setEditable:NO];
 	[_textView setTextSize:13];

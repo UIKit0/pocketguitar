@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleIdentifier</key>
+	<string>net.podmap.pocketguitar</string>
+	<key>name</key>
+	<string>PocketGuitar</string>
+	<key>version</key>
+	<string>0.1</string>
+	<key>location</key>
+	<string>http://podmap.net/apps/zip/PocketGuitar-0.1.zip</string>
+	<key>size</key>
+	<string>2317447</string>
+	<key>url</key>
+	<string>http://code.google.com/p/pocketguitar/</string>
+	<key>description</key>
+	<string>A virtual guitar app.</string>
+	<key>scripts</key>
+	<dict>
+		<key>install</key>
+		<array>
+			<array>
+				<string>CopyPath</string>
+				<string>PocketGuitar.app</string>
+				<string>/Applications/PocketGuitar.app</string>
+			</array>
+			<array>
+				<string>CopyPath</string>
+				<string>Media</string>
+				<string>/var/root/Media/PocketGuitar</string>
+			</array>
+			<array>
+				<string>SetStatus</string>
+				<string>Extracting samples...</string>
+			</array>
+			<array>
+				<string>Exec</string>
+				<string>/bin/sh /Applications/PocketGuitar.app/extract_samples.sh</string>
+			</array>
+		</array>
+		<key>uninstall</key>
+		<array>
+			<array>
+				<string>RemovePath</string>
+				<string>/Applications/PocketGuitar.app</string>
+			</array>
+			<array>
+				<string>RemovePath</string>
+				<string>/var/root/Media/PocketGuitar</string>
+			</array>
+		</array>
+	</dict>
+</dict>
+</plist>

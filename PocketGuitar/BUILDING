@@ -1,0 +1,6 @@
+Building PocketGuitar:
+
+- Copy AudioQueue.h in Leopard to this directory. (My build environment for iPhone is Tiger)
+- Open PocketGuitar.xcodeproj with XCode and build it.
+- ./convert_waves.sh
+- ./package.sh

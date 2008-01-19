@@ -62,10 +62,10 @@ struct __GSEvent {
 @end
 
 @implementation VolumeSliderView
-- (id)initWithFrame:(CGRect)rect {
+- (id)initWithFrame:(CGRect)rect andVolume:(float)vol {
     [super initWithFrame:rect];
     [self setBackgroundColor:(CGColorRef)[(id)GSColorCreateColorWithDeviceRGBA(1.0f, 0.8f, 0.2f, 0.5f) autorelease]];
-	volume = 0.8;
+	volume = vol;
 	return self;
 }
 
@@ -349,7 +349,7 @@ struct __GSEvent {
 		 repeats:YES];
 	[fingerView setEnabledGestures: TRUE];
 
-	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET)];
+	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET) andVolume:[_guitar volume]];
 	[sliderView setDelegate:self];
 	[self addSubview:sliderView];
 

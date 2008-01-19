@@ -14,8 +14,7 @@ CC=/usr/local/bin/arm-apple-darwin-gcc
 CPP=/usr/local/bin/arm-apple-darwin-cpp
 CFLAGS=-g -O2 -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
 LD=$(CC)
-LDFLAGS=-Wl -L. -lstdc++ -lobjc -ObjC -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial -lstk
-
+LDFLAGS=-Wl -lstdc++ -lobjc -ObjC -framework MobileMusicPlayer -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial
 WRAPPER_NAME=$(PRODUCT_NAME).app
 EXECUTABLE_NAME=$(PRODUCT_NAME)
 SOURCES_ABS=$(addprefix $(SRCROOT)/,$(SOURCES))
@@ -34,11 +33,16 @@ PRODUCT_ABS=$(APP_ABS)/$(EXECUTABLE_NAME)
 all: $(PRODUCT_ABS)
 
 $(PRODUCT_ABS): $(APP_ABS) $(OBJECTS_ABS)
-	$(LD) $(LDFLAGS) -o $(PRODUCT_ABS) $(OBJECTS_ABS)
+	$(LD) $(LDFLAGS) -o $(PRODUCT_ABS) $(OBJECTS_ABS) libstk.a
 
-$(APP_ABS): $(INFOPLIST_ABS)
+$(APP_ABS): $(INFOPLIST_ABS) $(ICON_ABS)
 	mkdir -p $(APP_ABS)
 	cp $(INFOPLIST_ABS) $(APP_ABS)/
+	cp $(addprefix $(SRCROOT)/,icon.png) $(APP_ABS)/
+	cp $(addprefix $(SRCROOT)/,Default.png) $(APP_ABS)/
+	cp $(addprefix $(SRCROOT)/,silence.wav) $(APP_ABS)/
+	cp $(addprefix $(SRCROOT)/,mpg123) $(APP_ABS)/
+	cp $(addprefix $(SRCROOT)/,extract_samples.sh) $(APP_ABS)/
 
 #$(RAWWAVES_DIR): $(RAWWAVES_SRC)#
 #	mkdir -p $(RAWWAVES_DIR)
