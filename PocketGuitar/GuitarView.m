@@ -6,12 +6,8 @@
 
 #import "GuitarView.h"
 
-#define SCALE_FACTOR 0.4
-#define NUT_OFFSET 30
 #define DUMP_EVENTS 0
-#define FRET_SIZE 56
-#define PICKUP_OFFSET 350
-#define FRET_MARGIN -16
+#define NUT_OFFSET 30
 
 int GSEventGetEventNumber(GSEvent *ev);
 CGPoint GSEventGetPathInfoAtIndex(GSEvent *ev, int i);
@@ -115,16 +111,21 @@ struct __GSEvent {
 	return self;
 }
 
+- (Fretboard*)fretboard {
+	return [[view guitar] fretboard];
+}
+
 - (float)fretFromPoint:(float)y {
 //	CGSize size = ((CGRect) [view bounds]).size;
 //	float f = 12.0 / (1.0 - ((y - NUT_OFFSET) / size.height * SCALE_FACTOR)) - 12;
 //	return ceil(f + 0.5);
-	return ceil((y - NUT_OFFSET) / FRET_SIZE);
+	return ceil([[self fretboard] fretFromPosition:y]);
+//	return ceil((y - NUT_OFFSET) / [board ]);
 }
 
 - (void)pressed:(CGPoint)point {
 	pressed = TRUE;
-	if (point.y < PICKUP_OFFSET) {
+	if (point.y < [[self fretboard] pickupOffset]) {
 		fret = [self fretFromPoint:point.y];
 		string = [view stringAt:point];
 		[string addFinger:self];
@@ -138,7 +139,7 @@ struct __GSEvent {
 }
 
 - (void)dragged:(CGPoint)point {
-	if (point.y < PICKUP_OFFSET) {
+	if (point.y < [[self fretboard] pickupOffset]) {
 		float newFret = [self fretFromPoint:point.y];
 		if (string && fret != newFret) {
 			if ([string isLastFinger:self]) {
@@ -199,16 +200,16 @@ struct __GSEvent {
 //	[sketchView drawRect:nsr withContext:UICurrentContext()];
 	CGContextRef context = UICurrentContext();
 	CGContextClearRect(context, [self bounds]);
-	CGSize size = ((CGRect) [self bounds]).size;
 	CGContextSetLineWidth(context, 16);
 	int i;
 	
 	GuitarView *view = (GuitarView*)[self superview];
-	for (i = 0; i < STRINGS; i++) {
-		float y = [view fretPositionAt:(int)[[view stringAtIndex:i] fret]];
-		float x = ((float)i + 0.5) / STRINGS * (size.width - FRET_MARGIN * 2) + FRET_MARGIN;
+	Fretboard *fretboard = [[view guitar] fretboard];
+	for (i = 0; i < [fretboard stringCount]; i++) {
+		float y = [fretboard fretPositionAt:(int)[[view stringAtIndex:i] fret]];
+		float x = [fretboard stringPositionAt:i];
 		CGContextSetRGBStrokeColor(context, 0, 1, 0, 1);
-		CGContextMoveToPoint(context, x, NUT_OFFSET);
+		CGContextMoveToPoint(context, x, [[[view guitar] fretboard] displayOffset]);
 		CGContextAddLineToPoint(context, x, y);
 		CGContextStrokePath(context);
 	}
@@ -275,45 +276,7 @@ struct __GSEvent {
 //	[sketchView drawRect:nsr withContext:UICurrentContext()];
 	CGContextRef context = UICurrentContext();
 	CGContextClearRect(context, [self bounds]);
-	CGSize size = ((CGRect) [self bounds]).size;
-	
-	CGContextSetRGBFillColor(context, 0.17, 0.04, 0.01, 1);
-	CGContextFillRect(context, CGRectMake(0, NUT_OFFSET, rect.size.width, PICKUP_OFFSET));
-
-	int i;
-	
-	for (i = 0; i < MAX_FRETS; i++) {
-		float y = fretPositions[i];
-		
-		CGContextSetLineWidth(context, 3);
-		CGContextSetRGBStrokeColor(context, 0.6, 0.6, 0.6, 1);
-		CGContextMoveToPoint(context, 0, y - 1);
-		CGContextAddLineToPoint(context, size.width, y - 1);
-		CGContextStrokePath(context);
-		
-		CGContextSetLineWidth(context, 1);
-		CGContextSetRGBStrokeColor(context, 0.2, 0.2, 0.2, 1);
-		CGContextMoveToPoint(context, 0, y + 2);
-		CGContextAddLineToPoint(context, size.width, y + 2);
-		CGContextStrokePath(context);
-	}
-	
-	for (i = 0; i < STRINGS; i++) {
-		
-		float x = ((float)i + 0.5) / STRINGS * (size.width - FRET_MARGIN * 2) + FRET_MARGIN;
-
-		CGContextSetLineWidth(context, 4);
-		CGContextSetRGBStrokeColor(context, 1, 1, 1, 1);
-		CGContextMoveToPoint(context, x, NUT_OFFSET);
-		CGContextAddLineToPoint(context, x, size.height);
-		CGContextStrokePath(context);
-
-		CGContextSetLineWidth(context, 1);
-		CGContextSetRGBStrokeColor(context, 0.3, 0.3, 0.3, 1);
-		CGContextMoveToPoint(context, x + 3, NUT_OFFSET);
-		CGContextAddLineToPoint(context, x + 3, size.height);
-		CGContextStrokePath(context);
-	}
+	[[[self guitar] fretboard] drawRect:rect withContext:context andEnableDrag:NO];
 }
 
 - (void)updateView {
@@ -327,16 +290,9 @@ struct __GSEvent {
 - (id)initWithFrame:(CGRect)rect {
     self = [super initWithFrame:rect];
 	int i;
-	InstrumentFactory *defaultFactory = [InstrumentFactory defaultFactory];
-	_guitar = [[Guitar alloc] init];
-	[_guitar reloadInstruments:defaultFactory];
+	_guitar = [[Guitar alloc] initWithRect:rect];
 	for (i = 0; i < FINGER_SLOTS; i++) {
 		fingers[i] = [[FingerImpl alloc] init:self];
-	}
-	for (i = 0; i < MAX_FRETS; i++) {
-//		float p = 1.0 - 1.0 / pow(pow(2.0, i), 1.0 / 12);
-//		fretPositions[i] = p / SCALE_FACTOR * rect.size.height + NUT_OFFSET;
-		fretPositions[i] = NUT_OFFSET + i * FRET_SIZE;
 	}
 	[_guitar start];
     UIView *fingerView = [[FingerView alloc] initWithFrame:rect];
@@ -349,7 +305,7 @@ struct __GSEvent {
 		 repeats:YES];
 	[fingerView setEnabledGestures: TRUE];
 
-	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET) andVolume:[_guitar volume]];
+	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET - 1) andVolume:[_guitar volume]];
 	[sliderView setDelegate:self];
 	[self addSubview:sliderView];
 
@@ -405,20 +361,14 @@ struct __GSEvent {
 }
 
 - (int)stringIndexAt:(CGPoint)point {
-	CGSize size = [self bounds].size;
-	int string = (point.x - FRET_MARGIN) / (size.width - FRET_MARGIN * 2) * STRINGS;
-	if (string < 0) string = 0;
-	if (string > STRINGS - 1) string = STRINGS - 1;
-	return string;
+	return [[[self guitar] fretboard] stringIndexFromPosition:point.x];
 }
 
 - (float)fretPositionAt:(int)index {
-	return fretPositions[index];
+	return [[[self guitar] fretboard] fretPositionAt:index];
 }
 
-- (void)reloadInstruments:(InstrumentFactory*)factory {
-	NSLog(@"reloadInstruments");
-	[_guitar reloadInstruments:factory];
+- (Guitar*)guitar {
+	return _guitar;
 }
-
 @end

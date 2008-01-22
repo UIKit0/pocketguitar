@@ -6,13 +6,15 @@ SOURCES=\
 	GuitarView.m \
 	AudioOutput.m \
 	SettingsView.m \
-	InstrumentFactory.mm
+	InstrumentFactory.mm \
+	Fretboard.m \
+	FretboardEditor.m
 
 STK_HOME=/Users/shinya/src/stk-4.3.1
 RAWWAVES_SRC=rawwaves
 CC=/usr/local/bin/arm-apple-darwin-gcc
 CPP=/usr/local/bin/arm-apple-darwin-cpp
-CFLAGS=-g -O2 -lobjc -ObjC -framework CoreFoundation -framework Foundation -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
+CFLAGS=-g -O2 -lobjc -framework CoreFoundation -framework Foundation -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
 LD=$(CC)
 LDFLAGS=-Wl -lstdc++ -lobjc -ObjC -framework MobileMusicPlayer -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial
 WRAPPER_NAME=$(PRODUCT_NAME).app

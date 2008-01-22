@@ -21,6 +21,16 @@
 #import "AudioOutput.h"
 #import "InstrumentFactory.h"
 
+@interface Sample : NSObject {
+	@public NSString *filename;
+	@public float frequency;
+	@public float amplitude;
+}
+@end
+
+@implementation Sample
+@end
+
 @interface WaveData : NSObject {
 	@public int _size;
 	@public short *_buffer;
@@ -102,8 +112,9 @@ class SimpleSampler : public Instrmnt {
 	float _envelope;
 	float _releaseRate;
 	float _releaseOutput;
+	float _amplitude;
 public:
-	SimpleSampler(WaveData *data, float base);
+	SimpleSampler(WaveData *data, float base, float amplitude);
 	~SimpleSampler();
 	void noteOn(StkFloat frequency, StkFloat amplitude);
 	void noteOff(StkFloat amplitude);
@@ -114,13 +125,14 @@ protected:
 	short valueAt(int i);
 };
 
-SimpleSampler::SimpleSampler(WaveData *data, float base) {
+SimpleSampler::SimpleSampler(WaveData *data, float base, float amplitude) {
 	_data = data;
 	_rate = 1.0;
 	_releaseRate = 1.0 / SAMPLING_RATE / 0.5; // 0.5 sec
 	_base = base;
 	_releaseOutput = 0;
 	_keyOn = NO;
+	_amplitude = amplitude;
 	[_data incrementRefCount];
 }
 
@@ -143,7 +155,7 @@ void SimpleSampler :: noteOn(StkFloat frequency, StkFloat amplitude) {
 	}
 	_keyOn = YES;
 	_time = 0;
-	_envelope = 1.0;
+	_envelope = _amplitude;
 }
 
 void SimpleSampler :: noteOff(StkFloat amplitude) {
@@ -212,40 +224,39 @@ static NSString *fileNames[] = {@"e6", @"a5", @"d4", @"g3", @"b2", @"e1"};
 	NSString *_name;
 	NSString *_directory;
 	NSMutableDictionary *_dataCache;
-	int _strings;
+	NSArray *_samples;
 }
 @end
 
 @implementation SampledGuitarFactory
 - (Instrmnt *)newInstrumentWithBaseFrequency:(float)freq {
-	float freqForString;
-	int i;
-	for (i = 0; i < _strings; i++) {
-		freqForString = A_FREQ * pow(2.0, stringNotes[i] / 12);
-		if (freqForString >= freq) {
+	NSEnumerator *enm = [_samples objectEnumerator];
+	Sample *sample;
+	while ((sample = [enm nextObject])) {
+		if (sample->frequency >= freq) {
 			break;
 		}
 	}
-	if (i >= _strings) i = _strings - 1;
-	NSString *file = [[NSString alloc] initWithFormat:@"/var/root/Media/PocketGuitar/%@/%@.raw", _directory, fileNames[i]];
-	NSLog(@"SampledGuitarFactory: newInstrument: %@ %f", file, freqForString);
+	if (!sample) sample = [_samples lastObject];
+	NSString *file = [[NSString alloc] initWithFormat:@"/var/root/Media/PocketGuitar/%@/%@.raw", _directory, sample->filename];
+	NSLog(@"SampledGuitarFactory: newInstrument: %@ %f", sample->filename, sample->frequency);
 	WaveData *data = [_dataCache objectForKey:file];
 	if (!data) {
 		NSLog(@"SampledGuitarFactory: loading from %@", file);
 		data = [WaveData loadFromFile:file withCache:_dataCache];
 	}
-	return new SimpleSampler(data, freqForString);
+	return new SimpleSampler(data, sample->frequency, sample->amplitude);
 }
 
 - (NSString *)name {
 	return _name;
 }
 
-- (id)initWithName:(NSString*)name directory:(NSString*)directory strings:(int)strings {
+- (id)initWithName:(NSString*)name directory:(NSString*)directory samples:(NSArray*)samples {
 	self = [super init];
 	_name = name;
 	_directory = directory;
-	_strings = strings;
+	_samples = samples;
 	_dataCache = [[NSMutableDictionary alloc] initWithCapacity:10];
 	return self;
 }
@@ -338,12 +349,50 @@ static NSMutableArray *allInstruments;
 	return [[self allInstruments] objectAtIndex:0];
 }
 
++ (id)factoryWithName:(NSString*)name {
+	NSEnumerator *instruments = [[self allInstruments] objectEnumerator];
+	InstrumentFactory *factory;
+	while ((factory = [instruments nextObject])) {
+		if ([[factory name] isEqualToString:name]) {
+			return factory;
+		}
+	}
+	return NULL;
+}
+
 + (NSArray *)allInstruments {
 	if (!allInstruments) {
+		int i;
+		NSMutableArray *guitar, *bass;
+		guitar = [[NSMutableArray alloc] initWithCapacity:10];
+			NSLog(@"aaaa");
+		for (i = 0; i < 6; i++) {
+			Sample *item = [[Sample alloc] init];
+			NSLog(@"aaa");
+			item->filename = fileNames[i];
+			item->frequency = A_FREQ * pow(2.0, stringNotes[i] / 12);
+			item->amplitude = 0.8;
+			[guitar addObject:item];
+		}
+		bass = [[NSMutableArray alloc] initWithCapacity:10];
+		for (i = 0; i < 4; i++) {
+			Sample *item = [[Sample alloc] init];
+			item->filename = fileNames[i];
+			item->frequency = A_FREQ * pow(2.0, stringNotes[i] / 12);
+			item->amplitude = 1.0;
+			[bass addObject:item];
+		}
+		/*
+		((Sample*)[bass objectAtIndex:0])->amplitude = 1.7;
+		((Sample*)[bass objectAtIndex:1])->amplitude = 1.5;
+		((Sample*)[bass objectAtIndex:2])->amplitude = 1.3;
+		((Sample*)[bass objectAtIndex:3])->amplitude = 1.1;
+		*/
+		NSLog(@"ffo");
 		allInstruments = [[NSMutableArray alloc] initWithCapacity:10];
-		[allInstruments addObject:[[SampledGuitarFactory alloc] initWithName:@"Distorted Guitar" directory:@"DistortedGuitar" strings:6]];
-		[allInstruments addObject:[[SampledGuitarFactory alloc] initWithName:@"Acoustic-Electric Guitar" directory:@"AcousticElectricGuitar" strings:6]];
-		[allInstruments addObject:[[SampledGuitarFactory alloc] initWithName:@"Electric Bass" directory:@"ElectricBass" strings:4]];
+		[allInstruments addObject:[[SampledGuitarFactory alloc] initWithName:@"Distorted Guitar" directory:@"DistortedGuitar" samples:guitar]];
+		[allInstruments addObject:[[SampledGuitarFactory alloc] initWithName:@"Acoustic-Electric Guitar" directory:@"AcousticElectricGuitar" samples:guitar]];
+		[allInstruments addObject:[[SampledGuitarFactory alloc] initWithName:@"Electric Bass" directory:@"ElectricBass" samples:bass]];
 //		[allInstruments addObject:[[PluckedFactory alloc] init]];
 //		[allInstruments addObject:[[MandolinFactory alloc] init]];
 //		[allInstruments addObject:[[RhodeyFactory alloc] init]];
@@ -353,4 +402,5 @@ static NSMutableArray *allInstruments;
 	}
 	return allInstruments;
 }
+
 @end

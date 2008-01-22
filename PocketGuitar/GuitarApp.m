@@ -12,7 +12,6 @@ typedef enum {
 
 id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 
-
 @implementation GuitarApp
 
 - (void)applicationDidFinishLaunching:(GSEventRef)event;
@@ -22,9 +21,6 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 	mainView = [[[UIView alloc] initWithFrame:bounds] autorelease];
     [window setContentView:mainView];
     [mainView setBackgroundColor:(CGColorRef)[(id)GSColorCreateWithDeviceWhite(0.0, 1.0) autorelease]];
-
-	settingsView = [[SettingsView alloc] initWithFrame:[window bounds]];
-	[settingsView setDelegate:self];
 
 	AVSystemController *avsc = [AVSystemController sharedAVSystemController];
 	float volume;
@@ -37,10 +33,10 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 	NSLog(@"state=%d", playbackState);
 
 	if (kPlayerPlaying != playbackState) {
-		[avsc setActiveCategoryVolumeTo:0.5];
+		[avsc setActiveCategoryVolumeTo:0.6];
 		AVController *avc = [AVController avController];
 		NSError *error;
-		AVItem *silence = [[AVItem alloc] initWithPath:[[NSBundle mainBundle] pathForResource :@"silence" ofType:@"wav"] error:&error];
+		AVItem *silence = [[AVItem alloc] initWithPath:[[NSBundle mainBundle] pathForResource:@"silence" ofType:@"wav"] error:&error];
 		[avc setCurrentItem:silence preservingRate:NO];
 		[avc setCurrentTime:0.0];
 		[avc play:nil];
@@ -67,6 +63,9 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 
 	[guitarView addSubview:pushButton];
 	
+	settingsView = [[SettingsView alloc] initWithFrame:[window bounds] andGuitar:[guitarView guitar]];
+	[settingsView setDelegate:self];
+
     [window orderFront:nil];
     [window makeKey:nil];
 }
@@ -78,7 +77,8 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 
 - (void)settingsSaved {
 	NSLog(@"settingsSaved %@", guitarView);
-	[guitarView reloadInstruments:[settingsView selectedInstrument]];
+	[[guitarView guitar] reloadSettings];
+	[guitarView setNeedsDisplay];
 	[transition transition:2 fromView:settingsView toView:guitarView];
 }
 

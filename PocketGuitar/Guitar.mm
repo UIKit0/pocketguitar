@@ -66,12 +66,16 @@ void VoicerManagingInstruments::clearInstruments() {
 
 @implementation PluckedString
 
-- (id)initWithFrequency:(float)freq voicer:(Voicer*)v channel:(int)ch {
+- (void)setFrequency:(float)freq {
 	frequency = freq;
+	baseNote = 12.0 * log(freq / 220) / log(2.0) + 57;
+}
+
+- (id)initWithFrequency:(float)freq voicer:(Voicer*)v channel:(int)ch {
 	voicer = v;
 	channel = ch;
 	tag = -1;
-	baseNote = 12.0 * log(freq / 220) / log(2.0) + 57;
+	[self setFrequency:freq];
 	fingers = [[NSMutableArray alloc] initWithCapacity:10];
 	return self;
 }
@@ -169,22 +173,41 @@ void VoicerManagingInstruments::clearInstruments() {
 
 static float stringNotes[] = {-5, 0, 5, 10, 14, 19};
 
+static float frequencyForString(int i) {
+	return A_FREQ * pow(2.0, stringNotes[i] / 12);
+}
 
-- (id)init {
+- (id)initWithRect:(CGRect)rect {
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	Stk::setSampleRate(SAMPLING_RATE);
-	_volume = 0.5;
+	if ([defaults stringForKey:@"volume"]) {
+		_volume = [defaults floatForKey:@"volume"];
+	} else {
+		_volume = 0.5;
+	}
 	_voicer = new VoicerManagingInstruments(1.0);
 	_lock = [[NSLock alloc] init];
+	_fretboard = [[Fretboard alloc] initWithRect:rect];
 //	_effect = new PRCRev(0.5);
 //	_effect = new Chorus();
 	int i;
 	for (i = 0; i < CHANNELS; i++) {
-		_strings[i] = [[PluckedString alloc] initWithFrequency:(A_FREQ * pow(2.0, stringNotes[i] / 12)) voicer:_voicer channel:i];
+		_strings[i] = [[PluckedString alloc] initWithFrequency:frequencyForString(i) voicer:_voicer channel:i];
 	}
+	[self reloadSettings];
 	return self;
 }
 
-- (void)reloadInstruments:(InstrumentFactory*)factory {
+/*
+- (void)resetFrequencies {
+	int i;
+	for (i = 0; i < CHANNELS; i++) {
+		[_strings[i] setFrequency:frequencyForString(_leftHanded ? CHANNELS - 1 - i : i)];
+	}
+}
+*/
+
+- (void)reloadInstruments {
 	[_lock lock];
 	printf("reload\n");
 	((VoicerManagingInstruments*)_voicer)->clearInstruments();
@@ -192,7 +215,7 @@ static float stringNotes[] = {-5, 0, 5, 10, 14, 19};
 	int i;//, j;
 	for (i = 0; i < CHANNELS; i++) {
 		//for (j = 0; j < 2; j++) { // 2 instruments per channel
-			Instrmnt *instr = [factory newInstrumentWithBaseFrequency:_strings[i]->frequency];
+			Instrmnt *instr = [_instrument newInstrumentWithBaseFrequency:_strings[i]->frequency];
 			_voicer->addInstrument(instr, i);
 		//}
 	}
@@ -200,8 +223,40 @@ static float stringNotes[] = {-5, 0, 5, 10, 14, 19};
 	[_lock unlock];
 }
 
+- (void)setInstrument:(InstrumentFactory*)factory {
+	if (_instrument && [[factory name] isEqualToString:[_instrument name]]) {
+		return;
+	}
+	_instrument = factory;
+	[self reloadInstruments];
+}
+
+- (void)saveSettings {
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	[defaults setObject:[_instrument name] forKey:@"instrumentName"];
+	[defaults setInteger:_leftHanded forKey:@"leftHanded"];
+	[_fretboard save];
+}
+
+- (void)reloadSettings {
+	NSLog(@"reloadSettings");
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSString *instrumentName = [defaults stringForKey:@"instrumentName"];
+	InstrumentFactory *factory = NULL;
+	if (instrumentName) {
+		factory = [InstrumentFactory factoryWithName:instrumentName];
+	}
+	if (!factory) {
+		factory = [InstrumentFactory defaultFactory];
+	}
+	_leftHanded = [defaults integerForKey:@"leftHanded"];
+	[self setInstrument:factory];
+	[_fretboard reload];
+}
+
+
 - (PluckedString*)stringAtIndex:(int)i {
-	return _strings[i];
+	return _strings[_leftHanded ? CHANNELS - 1 - i : i];
 }
 
 - (float)volume {
@@ -210,5 +265,23 @@ static float stringNotes[] = {-5, 0, 5, 10, 14, 19};
 
 - (void)setVolume:(float)volume {
 	_volume = volume;
+	[[NSUserDefaults standardUserDefaults] setFloat:_volume forKey:@"volume"];
+}
+
+- (Fretboard*)fretboard {
+	return _fretboard;
+}
+
+- (InstrumentFactory*)instrument {
+	return _instrument;
+}
+
+- (void)setLeftHanded:(BOOL)leftHanded {
+	_leftHanded = leftHanded;
+	//[self resetFrequencies];
+}
+
+- (BOOL)leftHanded {
+	return _leftHanded;
 }
 @end

@@ -5,6 +5,11 @@
 //
 
 #import "SettingsView.h"
+#import "FretboardEditor.h"
+#import "Guitar.h"
+
+#import <UIKit/CDStructures.h>
+#import <UIKit/UISwitchControl.h>
 
 @interface SettingsSubView : UIView {
 	UIPreferencesTable *_table;
@@ -67,7 +72,7 @@
 	CGSize navSize = [UINavigationBar defaultSize];
 	_textView = [[UITextView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y + navSize.height, frame.size.width, frame.size.height - navSize.height)];
 	NSMutableString *about = [[NSMutableString alloc] init];
-	[about appendString:@"<h3>PocketGuitar 0.1</h3>"];
+	[about appendString:@"<h3>PocketGuitar 0.2</h3>"];
 	[about appendString:@"<div>http://code.google.com/p/pocketguitar/</div>"];
 	[about appendString:@"<div>Copyright (C) 2008 Shinya Kasatani [kasatani at gmail.com]</div>"];
 	[about appendString:@"<hr/>"];
@@ -164,30 +169,49 @@
 @end
 
 @interface MainSettingsView : SettingsSubView {
-	UIPreferencesTableCell *instrumentCell;
-	UIPreferencesTableCell *aboutCell;
+	UIPreferencesTableCell *_instrumentCell;
+	UIPreferencesTableCell *_editFretboardCell;
+	UIPreferencesTableCell *_leftHandedCell;
+	UIPreferencesTableCell *_aboutCell;
+	UISwitchControl *_leftHandedSwitch;
 }
 @end
 
 @implementation MainSettingsView
 
 -(void)reloadData {
-	[instrumentCell setValue:[[[self parent] selectedInstrument] name]];
+	[_instrumentCell setValue:[[[self parent] selectedInstrument] name]];
+	[_leftHandedSwitch setValue:[[[self parent] guitar] leftHanded]];
 	[super reloadData];
 }
 
 -(id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame backTitle:@"Back"];
 	
-	instrumentCell = [[UIPreferencesTableCell alloc] init];
-	[instrumentCell setTitle:@"Instrument"];
-	[instrumentCell setShowDisclosure:YES];
-	[instrumentCell setAction:@selector(chooseInstrument)];
+	_instrumentCell = [[UIPreferencesTableCell alloc] init];
+	[_instrumentCell setTitle:@"Instrument"];
+	[_instrumentCell setShowDisclosure:YES];
 
-	aboutCell = [[UIPreferencesTableCell alloc] init];
-	[aboutCell setTitle:@"About"];
+	_editFretboardCell = [[UIPreferencesTableCell alloc] init];
+	[_editFretboardCell setTitle:@"Edit Fretboard"];
+	[_editFretboardCell setShowDisclosure:YES];
+	
+	_leftHandedCell = [[UIPreferencesTableCell alloc] init];
+	[_leftHandedCell setTitle:@"Left-handed"];
+	[_leftHandedCell setShowSelection:NO];
+	
+	_leftHandedSwitch = [[UISwitchControl alloc] initWithFrame:CGRectMake(208, 9, 60, 25)];
+	[_leftHandedCell addSubview:_leftHandedSwitch];
+	
+	_aboutCell = [[UIPreferencesTableCell alloc] init];
+	[_aboutCell setTitle:@"About"];
+	[_aboutCell setShowDisclosure:YES];
 	
 	return self;
+}
+
+- (BOOL)leftHanded {
+	return (BOOL)[_leftHandedSwitch value];
 }
 
 - (void)tableRowSelected:(NSNotification*)notification {
@@ -196,7 +220,11 @@
 	case 1:
 		[[self parent] chooseInstrument];
 		break;
-	case 3:
+	case 2:
+		[[self parent] editFretboard];
+		break;
+		break;
+	case 5:
 		[_parent about];
 		break;
 	}
@@ -211,7 +239,12 @@
 }
 
 - (int)preferencesTable:(UIPreferencesTable *)aTable numberOfRowsInGroup:(int)group {
-	return 1;
+	switch (group) {
+	case 0:
+		return 3;
+	case 1:
+		return 1;
+	}
 }
 
 - (UIPreferencesTableCell*)preferencesTable:(UIPreferencesTable*)aTable cellForGroup:(int)group {
@@ -221,9 +254,16 @@
 - (UIPreferencesTableCell*)preferencesTable:(UIPreferencesTable*)aTable cellForRow:(int)row inGroup:(int)group {
 	switch (group) {
 	case 0:
-		return instrumentCell;
+		switch (row) {
+		case 0:
+			return _instrumentCell;
+		case 1:
+			return _editFretboardCell;
+		case 2:
+			return _leftHandedCell;
+		}
 	case 1:
-		return aboutCell;
+		return _aboutCell;
 	}
 }
 
@@ -237,17 +277,25 @@
 @end
 
 @implementation SettingsView
--(id)initWithFrame:(CGRect)frame {
+-(id)initWithFrame:(CGRect)frame andGuitar:(Guitar*)guitar {
 	self = [super initWithFrame:frame];
+	_guitar = guitar;
+	
 	mainView = [[MainSettingsView alloc] initWithFrame:frame];
 	[mainView setParent:self];
 	instrumentsView = [[InstrumentsView alloc] initWithFrame:frame];
 	[instrumentsView setParent:self];
+	
+	fretboardEditor = [[FretboardEditor alloc] initWithFrame:frame];
+	[fretboardEditor setFretboard:[_guitar fretboard]];
+	[fretboardEditor setDelegate:self];
+	
 	aboutView = [[AboutView alloc] initWithFrame:frame];
 	[(SettingsSubView*)aboutView setParent:self];
+	
 	//[self addSubview:instrumentsView];
 	//[self addSubview:instrumentsView];
-	selectedInstrument = [InstrumentFactory defaultFactory];
+	selectedInstrument = [guitar instrument];
 
 	[self addSubview:mainView];
 	[mainView reloadData];
@@ -263,6 +311,10 @@
 	selectedInstrument = instrument;
 }
 
+- (void)editFretboard {
+	[self transition:1 toView:fretboardEditor];
+}
+
 - (void)chooseInstrument {
 	[instrumentsView reloadData];
 	[self transition:1 toView:instrumentsView];
@@ -272,6 +324,12 @@
 	[mainView reloadData];
 	[self transition:2 toView:mainView];
 }
+
+- (void)fretboardEdited {
+	[[_guitar fretboard] save];
+	[self transition:2 toView:mainView];
+}
+
 
 - (void)about {
 	[self transition:1 toView:aboutView];
@@ -284,10 +342,17 @@
 }
 
 - (void)saveSettings {
+	[_guitar setInstrument: selectedInstrument];
+	[_guitar setLeftHanded: [mainView leftHanded]];
+	[_guitar saveSettings];
 	[delegate performSelector:@selector(settingsSaved)];
 }
 
 - (void)setDelegate:(id)d {
 	delegate = d;
+}
+
+- (Guitar*)guitar {
+	return _guitar;
 }
 @end

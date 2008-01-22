@@ -16,23 +16,30 @@
 
 @class InstrumentsView;
 @class MainSettingsView;
+@class FretboardEditor;
+@class Fretboard;
+@class Guitar;
 
 @interface SettingsView : UITransitionView {
 	MainSettingsView *mainView;
 	UIPreferencesTable *table;
 	InstrumentFactory* selectedInstrument;
 	InstrumentsView *instrumentsView;
+	FretboardEditor *fretboardEditor;
+	Guitar *_guitar;
 	UIView *aboutView;
 	id delegate;
 }
 
+- (id)initWithFrame:(CGRect)frame andGuitar:(Guitar*)guitar;
 - (void)setDelegate:(id)delegate;
 - (InstrumentFactory*)selectedInstrument;
 - (void)setSelectedInstrument:(InstrumentFactory*)instrument;
 - (void)saveSettings;
-
 - (void)chooseInstrument;
+- (void)editFretboard;
 - (void)_instrumentChosen;
 - (void)about;
 - (void)closeAbout;
+- (Guitar*)guitar;
 @end

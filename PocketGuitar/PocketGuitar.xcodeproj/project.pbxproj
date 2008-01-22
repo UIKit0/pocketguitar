@@ -19,6 +19,10 @@
 		D5B2B0CA0D1E2FD70096FA6C /* GuitarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarView.h; sourceTree = "<group>"; };
 		D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarView.m; sourceTree = "<group>"; };
 		D5BF52BC0D45619B00098B6E /* extract_samples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = extract_samples.m; sourceTree = "<group>"; };
+		D5BF54450D45BB8800098B6E /* FretboardEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FretboardEditor.h; sourceTree = "<group>"; };
+		D5BF54460D45BB8800098B6E /* FretboardEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FretboardEditor.m; sourceTree = "<group>"; };
+		D5BF544D0D45BBFA00098B6E /* Fretboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fretboard.h; sourceTree = "<group>"; };
+		D5BF544E0D45BBFA00098B6E /* Fretboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fretboard.m; sourceTree = "<group>"; };
 		D5C299950D28C123008C478D /* SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsView.h; sourceTree = "<group>"; };
 		D5C299960D28C123008C478D /* SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsView.m; sourceTree = "<group>"; };
 		D90F56B90C6719EF007AE76B /* GuitarApp.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GuitarApp.m; sourceTree = "<group>"; };
@@ -44,6 +48,10 @@
 				D553669D0D3106AC00F7514D /* InstrumentFactory.mm */,
 				D506189B0D3AD61E00D191E0 /* Guitar.h */,
 				D506189C0D3AD61E00D191E0 /* Guitar.mm */,
+				D5BF54450D45BB8800098B6E /* FretboardEditor.h */,
+				D5BF54460D45BB8800098B6E /* FretboardEditor.m */,
+				D5BF544D0D45BBFA00098B6E /* Fretboard.h */,
+				D5BF544E0D45BBFA00098B6E /* Fretboard.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

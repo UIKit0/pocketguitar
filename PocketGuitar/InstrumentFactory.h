@@ -17,6 +17,7 @@
 }
 + (id)defaultFactory;
 + (NSArray *)allInstruments;
++ (id)factoryWithName:(NSString*)name;
 @end
 
 @interface InstrumentFactory ( FactoryMethods )

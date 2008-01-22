@@ -4,10 +4,12 @@
 //  Created by shinya on 08/01/14.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 #import "InstrumentFactory.h"
 #import "AudioOutput.h"
+#import "Fretboard.h"
 
 #ifndef STK_VOICER_H
 @class Instrmnt;
@@ -51,11 +53,21 @@
 	Effect *_effect;
 	PluckedString *_strings[STRINGS];
 	NSLock *_lock;
+	Fretboard *_fretboard;
+	InstrumentFactory *_instrument;
+	BOOL _leftHanded;
 }
 
+- (id)initWithRect:(CGRect)rect;
 - (PluckedString*)stringAtIndex:(int)i;
-- (void)reloadInstruments:(InstrumentFactory*)factory;
+- (void)reloadSettings;
+- (void)saveSettings;
 - (float)volume;
 - (void)setVolume:(float)volume;
+- (Fretboard*)fretboard;
+- (InstrumentFactory*)instrument;
+- (void)setInstrument:(InstrumentFactory*)instrmnt;
+- (BOOL)leftHanded;
+- (void)setLeftHanded:(BOOL)leftHanded;
 
 @end
