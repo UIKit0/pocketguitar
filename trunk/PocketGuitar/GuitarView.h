@@ -23,7 +23,6 @@
 //	Oscillator *oscillators[OSCILLATORS];
 //	Channel *channels[CHANNELS];
 	Finger *fingers[FINGER_SLOTS];
-	float fretPositions[MAX_FRETS];
 	Guitar *_guitar;
 	VolumeSliderView *sliderView;
 }
@@ -33,6 +32,6 @@
 - (PluckedString*)stringAtIndex:(int)index;
 - (float)fretPositionAt:(int)index;
 - (void)scanFingers:(GSEvent *)event;
-- (void)reloadInstruments:(InstrumentFactory*)factory;
+- (Guitar*)guitar;
 
 @end
