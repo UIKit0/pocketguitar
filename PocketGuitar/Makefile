@@ -12,7 +12,7 @@ STK_HOME=/Users/shinya/src/stk-4.3.1
 RAWWAVES_SRC=rawwaves
 CC=/usr/local/bin/arm-apple-darwin-gcc
 CPP=/usr/local/bin/arm-apple-darwin-cpp
-CFLAGS=-g -O2 -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
+CFLAGS=-g -O2 -lobjc -ObjC -framework CoreFoundation -framework Foundation -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
 LD=$(CC)
 LDFLAGS=-Wl -lstdc++ -lobjc -ObjC -framework MobileMusicPlayer -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial
 WRAPPER_NAME=$(PRODUCT_NAME).app
@@ -29,11 +29,16 @@ OBJECTS_ABS=$(addprefix $(CONFIGURATION_TEMP_DIR)/,$(OBJECTS))
 APP_ABS=$(BUILT_PRODUCTS_DIR)/$(WRAPPER_NAME)
 RAWWAVES_DIR=$(APP_ABS)/rawwaves
 PRODUCT_ABS=$(APP_ABS)/$(EXECUTABLE_NAME)
+EXTRACT_SAMPLES_NAME=extract_samples
+EXTRACT_SAMPLES_ABS=$(APP_ABS)/$(EXTRACT_SAMPLES_NAME)
 
-all: $(PRODUCT_ABS)
+all: $(PRODUCT_ABS) $(EXTRACT_SAMPLES_ABS)
 
 $(PRODUCT_ABS): $(APP_ABS) $(OBJECTS_ABS)
 	$(LD) $(LDFLAGS) -o $(PRODUCT_ABS) $(OBJECTS_ABS) libstk.a
+
+$(EXTRACT_SAMPLES_ABS): $(APP_ABS)
+	$(CC) $(CFLAGS) -o $(EXTRACT_SAMPLES_ABS) extract_samples.m libmpg123.a
 
 $(APP_ABS): $(INFOPLIST_ABS) $(ICON_ABS)
 	mkdir -p $(APP_ABS)
