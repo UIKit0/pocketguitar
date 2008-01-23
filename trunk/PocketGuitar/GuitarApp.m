@@ -82,5 +82,10 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 	[transition transition:2 fromView:settingsView toView:guitarView];
 }
 
+- (void)applicationWillSuspend {
+	[[guitarView guitar] saveVolume];
+	[super applicationWillSuspend];
+}
+
 @end
 
