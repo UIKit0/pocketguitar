@@ -238,6 +238,10 @@ static float frequencyForString(int i) {
 	[_fretboard save];
 }
 
+- (void)saveVolume {
+	[[NSUserDefaults standardUserDefaults] setFloat:_volume forKey:@"volume"];
+}
+
 - (void)reloadSettings {
 	NSLog(@"reloadSettings");
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -265,7 +269,6 @@ static float frequencyForString(int i) {
 
 - (void)setVolume:(float)volume {
 	_volume = volume;
-	[[NSUserDefaults standardUserDefaults] setFloat:_volume forKey:@"volume"];
 }
 
 - (Fretboard*)fretboard {

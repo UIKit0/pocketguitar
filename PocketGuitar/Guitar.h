@@ -62,6 +62,7 @@
 - (PluckedString*)stringAtIndex:(int)i;
 - (void)reloadSettings;
 - (void)saveSettings;
+- (void)saveVolume;
 - (float)volume;
 - (void)setVolume:(float)volume;
 - (Fretboard*)fretboard;
