@@ -10,6 +10,7 @@
 
 #import <UIKit/CDStructures.h>
 #import <UIKit/UISwitchControl.h>
+#import <Celestial/AVSystemController.h>
 
 @interface SettingsSubView : UIView {
 	UIPreferencesTable *_table;
@@ -172,8 +173,11 @@
 	UIPreferencesTableCell *_instrumentCell;
 	UIPreferencesTableCell *_editFretboardCell;
 	UIPreferencesTableCell *_leftHandedCell;
+	UIPreferencesTableCell *_systemVolumeCell;
 	UIPreferencesTableCell *_aboutCell;
 	UISwitchControl *_leftHandedSwitch;
+	UISliderControl *_systemVolumeSlider;
+	float _initialSystemVolume;
 }
 @end
 
@@ -182,6 +186,12 @@
 -(void)reloadData {
 	[_instrumentCell setValue:[[[self parent] selectedInstrument] name]];
 	[_leftHandedSwitch setValue:[[[self parent] guitar] leftHanded]];
+	
+	NSString *name;
+	AVSystemController *avsc = [AVSystemController sharedAVSystemController];
+	[avsc getActiveCategoryVolume:&_initialSystemVolume andName:&name];
+	[_systemVolumeSlider setValue:_initialSystemVolume];
+	
 	[super reloadData];
 }
 
@@ -203,11 +213,33 @@
 	_leftHandedSwitch = [[UISwitchControl alloc] initWithFrame:CGRectMake(208, 9, 60, 25)];
 	[_leftHandedCell addSubview:_leftHandedSwitch];
 	
+	_systemVolumeCell = [[UIPreferencesTableCell alloc] init];
+	[_systemVolumeCell setTitle:@"System Volume"];
+	[_systemVolumeCell setShowSelection:NO];
+	
+	_systemVolumeSlider = [[UISliderControl alloc] initWithFrame:CGRectMake(170, 10, 130, 25)];
+	[_systemVolumeSlider setMinValue:0.0];
+	[_systemVolumeSlider setMaxValue:1.0];
+	[_systemVolumeSlider addTarget:self action:@selector(changeVolume) forEvents:1|4]; // mouseDown | mouseDragged
+	[_systemVolumeCell addSubview:_systemVolumeSlider];
+	
 	_aboutCell = [[UIPreferencesTableCell alloc] init];
 	[_aboutCell setTitle:@"About"];
 	[_aboutCell setShowDisclosure:YES];
 	
 	return self;
+}
+
+- (void)updateSystemVolume {
+	float volume = [_systemVolumeSlider value];
+	if (_initialSystemVolume != volume) {
+		NSLog(@"changing volume from %f to %f", _initialSystemVolume, volume);
+		[[AVSystemController sharedAVSystemController] setActiveCategoryVolumeTo:volume];
+		[AudioOutput initSystemVolume];
+	}
+}
+
+- (void)changeVolume {
 }
 
 - (BOOL)leftHanded {
@@ -224,7 +256,7 @@
 		[[self parent] editFretboard];
 		break;
 		break;
-	case 5:
+	case 7:
 		[_parent about];
 		break;
 	}
@@ -235,7 +267,7 @@
 }
 
 - (int)numberOfGroupsInPreferencesTable:(UIPreferencesTable*)aTable {
-	return 2;
+	return 3;
 }
 
 - (int)preferencesTable:(UIPreferencesTable *)aTable numberOfRowsInGroup:(int)group {
@@ -243,6 +275,8 @@
 	case 0:
 		return 3;
 	case 1:
+		return 1;
+	case 2:
 		return 1;
 	}
 }
@@ -263,6 +297,8 @@
 			return _leftHandedCell;
 		}
 	case 1:
+		return _systemVolumeCell;
+	case 2:
 		return _aboutCell;
 	}
 }
@@ -301,6 +337,10 @@
 	[mainView reloadData];
 	
 	return self;
+}
+
+- (void)reload {
+	[mainView reloadData];
 }
 
 - (InstrumentFactory*)selectedInstrument {
@@ -344,6 +384,7 @@
 - (void)saveSettings {
 	[_guitar setInstrument: selectedInstrument];
 	[_guitar setLeftHanded: [mainView leftHanded]];
+	[mainView updateSystemVolume];
 	[_guitar saveSettings];
 	[delegate performSelector:@selector(settingsSaved)];
 }

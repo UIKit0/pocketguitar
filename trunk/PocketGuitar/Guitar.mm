@@ -85,6 +85,14 @@ void VoicerManagingInstruments::clearInstruments() {
 		voicer->pitchBend(tag, 64.0 + (f - pluckedFret) * 64 / 12);
 	}
 	fret = f;
+	_pitchBend = 0;
+}
+
+- (void)pitchBend:(float)f {
+	_pitchBend = f;
+	if (tag >= 0) {
+		voicer->pitchBend(tag, 64.0 + (fret + _pitchBend - pluckedFret) * 64 / 12);
+	}
 }
 
 - (float)fret {

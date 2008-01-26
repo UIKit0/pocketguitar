@@ -35,6 +35,7 @@
 	NSMutableArray *fingers;
 	@public
 	float frequency;
+	float _pitchBend;
 }
 
 - (void)addFinger:(Finger*)f;
@@ -43,6 +44,7 @@
 - (BOOL)isLastFinger:(Finger*)f;
 - (void)removeFinger:(Finger*)f;
 - (void)setFret:(float)f;
+- (void)pitchBend:(float)f;
 - (float)fret;
 
 @end

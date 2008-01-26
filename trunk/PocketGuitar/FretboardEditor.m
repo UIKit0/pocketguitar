@@ -61,18 +61,36 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 	_fretboard = fretboard;
 }
 
-static void drawArrow(CGContextRef context, float x, float y, float width, float height) {
+static void drawArrowProc(CGContextRef context, float x, float y, float width, float height, 
+                          void (moveTo)(CGContextRef context, float x, float y),
+                          void (lineTo)(CGContextRef context, float x, float y)) {
 	float lineMargin = 0.3;
 	float arrowOffset = 0.6;
-	CGContextMoveToPoint(context, x + lineMargin * width, y);
-	CGContextAddLineToPoint(context, x + lineMargin * width, y + arrowOffset * height);
-	CGContextAddLineToPoint(context, x, y + arrowOffset * height);
-	CGContextAddLineToPoint(context, x + 0.5 * width, y +  height);
-	CGContextAddLineToPoint(context, x + width, y + arrowOffset * height);
-	CGContextAddLineToPoint(context, x + (1.0 - lineMargin) * width, y + arrowOffset * height);
-	CGContextAddLineToPoint(context, x + (1.0 - lineMargin) * width, y);
-	CGContextAddLineToPoint(context, x + lineMargin * width, y);
+	moveTo(context, x + lineMargin * width, y);
+	lineTo(context, x + lineMargin * width, y + arrowOffset * height);
+	lineTo(context, x, y + arrowOffset * height);
+	lineTo(context, x + 0.5 * width, y +  height);
+	lineTo(context, x + width, y + arrowOffset * height);
+	lineTo(context, x + (1.0 - lineMargin) * width, y + arrowOffset * height);
+	lineTo(context, x + (1.0 - lineMargin) * width, y);
+	lineTo(context, x + lineMargin * width, y);
 	CGContextFillPath(context);
+}
+
+static void drawArrow(CGContextRef context, float x, float y, float width, float height) {
+	drawArrowProc(context, x, y, width, height, CGContextMoveToPoint, CGContextAddLineToPoint);
+}
+
+static void sideMoveTo(CGContextRef context, float y, float x) {
+	CGContextMoveToPoint(context, x, y);
+}
+
+static void sideLineTo(CGContextRef context, float y, float x) {
+	CGContextAddLineToPoint(context, x, y);
+}
+
+static void drawHorizontalArrow(CGContextRef context, float x, float y, float width, float height) {
+	drawArrowProc(context, y, x, height, width, sideMoveTo, sideLineTo);
 }
 
 static void drawLine(CGContextRef context, float x1, float y1, float x2, float y2) {
@@ -100,9 +118,18 @@ static void drawLine(CGContextRef context, float x1, float y1, float x2, float y
 	CGContextSetRGBFillColor(context, 0.2, 1, 0.2, 1);
 	drawLine(context, 0, [_fretboard displayOffset] + [_fretboard displayHeight], size.width, 
 						[_fretboard displayOffset] + [_fretboard displayHeight]);
+
 	y = [_fretboard displayOffset] + [_fretboard displayHeight];
 	drawArrow(context, 10, y + 10, 50, 50);
 	drawArrow(context, 10, y - 10, 50, -50);
+
+	CGContextSetRGBStrokeColor(context, 1, 1, 0.1, 1);
+	CGContextSetRGBFillColor(context, 1, 1, 0.1, 1);
+	float stringCount = [_fretboard stringCount];
+	float stringMargin = [_fretboard stringMargin];
+	float x = ((float)(stringCount - 1) + 0.5) / stringCount * (size.width - stringMargin * 2) + stringMargin;
+	drawHorizontalArrow(context, x - 10, 100, -50, 50);
+	drawHorizontalArrow(context, x + 10, 100, 50, 50);
 }
 
 - (void)mouseDown:(GSEvent *)event {
