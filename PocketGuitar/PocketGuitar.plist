@@ -7,11 +7,11 @@
 	<key>name</key>
 	<string>PocketGuitar</string>
 	<key>version</key>
-	<string>0.1</string>
+	<string>0.2</string>
 	<key>location</key>
-	<string>http://podmap.net/apps/zip/PocketGuitar-0.1.zip</string>
+	<string>http://podmap.net/apps/zip/PocketGuitar-0.2.zip</string>
 	<key>size</key>
-	<string>2317447</string>
+	<string>2420974</string>
 	<key>url</key>
 	<string>http://code.google.com/p/pocketguitar/</string>
 	<key>description</key>
@@ -20,6 +20,14 @@
 	<dict>
 		<key>install</key>
 		<array>
+			<array>
+				<string>RemovePath</string>
+				<string>/Applications/PocketGuitar.app</string>
+			</array>
+			<array>
+				<string>RemovePath</string>
+				<string>/var/root/Media/PocketGuitar</string>
+			</array>
 			<array>
 				<string>CopyPath</string>
 				<string>PocketGuitar.app</string>
@@ -36,7 +44,7 @@
 			</array>
 			<array>
 				<string>Exec</string>
-				<string>/bin/sh /Applications/PocketGuitar.app/extract_samples.sh</string>
+				<string>/Applications/PocketGuitar.app/extract_samples</string>
 			</array>
 		</array>
 		<key>uninstall</key>
