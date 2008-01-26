@@ -71,28 +71,33 @@ void VoicerManagingInstruments::clearInstruments() {
 	baseNote = 12.0 * log(freq / 220) / log(2.0) + 57;
 }
 
-- (id)initWithFrequency:(float)freq voicer:(Voicer*)v channel:(int)ch {
+- (id)initWithFrequency:(float)freq voicer:(Voicer*)v channel:(int)ch guitar:(Guitar*)guitar {
 	voicer = v;
 	channel = ch;
 	tag = -1;
 	[self setFrequency:freq];
 	fingers = [[NSMutableArray alloc] initWithCapacity:10];
+	_guitar = guitar;
 	return self;
 }
 
 - (void)setFret:(float)f {
+	[_guitar lock];
 	if (tag >= 0 && f != fret) {
 		voicer->pitchBend(tag, 64.0 + (f - pluckedFret) * 64 / 12);
 	}
 	fret = f;
 	_pitchBend = 0;
+	[_guitar unlock];
 }
 
 - (void)pitchBend:(float)f {
+	[_guitar lock];
 	_pitchBend = f;
 	if (tag >= 0) {
 		voicer->pitchBend(tag, 64.0 + (fret + _pitchBend - pluckedFret) * 64 / 12);
 	}
+	[_guitar unlock];
 }
 
 - (float)fret {
@@ -100,17 +105,21 @@ void VoicerManagingInstruments::clearInstruments() {
 }
 
 - (void)pluck {
+	[_guitar lock];
 //	printf("pluck at %f %f\n", fret, baseNote+fret);
 	pluckedFret = fret;
 	voicer->pitchBend(tag, 64.0);
 	tag = voicer->noteOn(baseNote + fret, 60, channel);
+	[_guitar unlock];
 }
 
 - (void)mute {
+	[_guitar lock];
 	if (tag >= 0) {
 		voicer->noteOff(tag, 100);
 		tag = -1;
 	}
+	[_guitar unlock];
 }
 
 - (void)addFinger:(Finger*)f {
@@ -128,7 +137,9 @@ void VoicerManagingInstruments::clearInstruments() {
 		fret = [f fret];
 		if (tag >= 0) {
 			if (pluckedFret > 0) {
+				[_guitar lock];
 				voicer->pitchBend(tag, 64 + (fret - pluckedFret) * 64 / 12);
+				[_guitar unlock];
 			} else {
 				[self mute];
 			}
@@ -150,7 +161,9 @@ void VoicerManagingInstruments::clearInstruments() {
 		if (fret == 0) {
 			[self mute];
 		} else if (tag >= 0) {
+			[_guitar lock];
 			voicer->pitchBend(tag, 64 + (fret - pluckedFret) * 64 / 12);
+			[_guitar unlock];
 		}
 	}
 }
@@ -158,6 +171,14 @@ void VoicerManagingInstruments::clearInstruments() {
 @end
 
 @implementation Guitar
+- (void)lock {
+	[_lock lock];
+}
+
+- (void)unlock {
+	[_lock unlock];
+}
+
 - (void)fillBuffer:(AudioSample*)buffer frames:(int)frames {
 	[_lock lock];
     int i;
@@ -200,7 +221,7 @@ static float frequencyForString(int i) {
 //	_effect = new Chorus();
 	int i;
 	for (i = 0; i < CHANNELS; i++) {
-		_strings[i] = [[PluckedString alloc] initWithFrequency:frequencyForString(i) voicer:_voicer channel:i];
+		_strings[i] = [[PluckedString alloc] initWithFrequency:frequencyForString(i) voicer:_voicer channel:i guitar:self];
 	}
 	[self reloadSettings];
 	return self;

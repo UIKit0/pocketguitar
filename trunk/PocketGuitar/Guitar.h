@@ -20,6 +20,8 @@
 #define STRINGS 6
 #define CHANNELS STRINGS
 
+@class Guitar;
+
 @interface Finger : NSObject {
 }
 -(float) fret;
@@ -36,6 +38,7 @@
 	@public
 	float frequency;
 	float _pitchBend;
+	Guitar *_guitar;
 }
 
 - (void)addFinger:(Finger*)f;
@@ -72,5 +75,7 @@
 - (void)setInstrument:(InstrumentFactory*)instrmnt;
 - (BOOL)leftHanded;
 - (void)setLeftHanded:(BOOL)leftHanded;
+- (void)lock;
+- (void)unlock;
 
 @end
