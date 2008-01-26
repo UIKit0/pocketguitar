@@ -1,9 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <GraphicsServices/GraphicsServices.h>
-#import <Celestial/AVSystemController.h>
-#import <Celestial/AVController.h>
-#import <Celestial/AVItem.h>
 #import "GuitarView.h"
 #import "SettingsView.h"
 

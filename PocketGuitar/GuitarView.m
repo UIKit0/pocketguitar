@@ -96,6 +96,7 @@ struct __GSEvent {
 	BOOL plucked;
 	CGPoint lastPluckPoint;
 	PluckedString *string;
+	CGPoint fretPoint;
 	GuitarView *view;
 	float fret;
 }
@@ -129,6 +130,7 @@ struct __GSEvent {
 		fret = [self fretFromPoint:point.y];
 		string = [view stringAt:point];
 		[string addFinger:self];
+		fretPoint = point;
 	} else {
 		PluckedString *str = [view stringAt:point];
 		[str pluck];
@@ -140,10 +142,23 @@ struct __GSEvent {
 
 - (void)dragged:(CGPoint)point {
 	if (point.y < [[self fretboard] pickupOffset]) {
-		float newFret = [self fretFromPoint:point.y];
-		if (string && fret != newFret) {
-			if ([string isLastFinger:self]) {
-				[string setFret:newFret];
+		float fretless = [[self fretboard] fretFromPosition:point.y];
+		float newFret = ceil(fretless);
+		if (string) {
+			if (fret != newFret) {
+				if ([string isLastFinger:self]) {
+					[string setFret:newFret];
+					fretPoint = point;
+				}
+			} else {
+			/* TODO need more adjustments
+				if ([string isLastFinger:self]) {
+					float w = fretPoint.x - point.x;
+					float h = fretPoint.y - point.y;
+					float dist = sqrt(w * w + h * h) / 80;
+					[string pitchBend:dist];
+				}
+			*/
 			}
 		}
 		fret = newFret;
@@ -305,7 +320,7 @@ struct __GSEvent {
 		 repeats:YES];
 	[fingerView setEnabledGestures: TRUE];
 
-	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET - 1) andVolume:[_guitar volume]];
+	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET - 3) andVolume:[_guitar volume]];
 	[sliderView setDelegate:self];
 	[self addSubview:sliderView];
 

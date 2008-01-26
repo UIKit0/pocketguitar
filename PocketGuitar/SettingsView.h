@@ -31,6 +31,7 @@
 	id delegate;
 }
 
+- (void)reload;
 - (id)initWithFrame:(CGRect)frame andGuitar:(Guitar*)guitar;
 - (void)setDelegate:(id)delegate;
 - (InstrumentFactory*)selectedInstrument;

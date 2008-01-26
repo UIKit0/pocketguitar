@@ -5,6 +5,12 @@
 //
 
 #import "AudioOutput.h"
+#import <UIKit/UIKit.h>
+#import <GraphicsServices/GraphicsServices.h>
+#import <Celestial/AVSystemController.h>
+#import <Celestial/AVController.h>
+#import <Celestial/AVItem.h>
+#include "MobileMusicPlayer/MobileMusicPlayer.h"
 
 @implementation AudioOutput
 
@@ -57,6 +63,37 @@ static void AQBufferCallback(void *aqData, AudioQueueRef queue, AudioQueueBuffer
 -(id)init {
 	channels = [NSMutableArray new];
 	return self;
+}
+
+/*
+ * The system volume does not take effect until any sound is played with AVController,
+ * so we'll play a silent sound here
+ */
++ (void)initSystemVolume {
+	AVSystemController *avsc = [AVSystemController sharedAVSystemController];
+	float volume;
+	NSString *name;
+	[avsc getActiveCategoryVolume:&volume andName:&name];
+	NSLog(@"volume=%f name=%@", volume, name);
+	NSLog(@"route=%@", [avsc routeForCategory:@"Audio/Video"]);
+	
+	int playbackState = PCGetPlaybackState();
+	NSLog(@"state=%d", playbackState);
+
+	if (kPlayerPlaying != playbackState) {
+//		[avsc setActiveCategoryVolumeTo:0.6];
+		AVController *avc = [AVController avController];
+		NSError *error;
+		AVItem *silence = [[AVItem alloc] initWithPath:[[NSBundle mainBundle] pathForResource:@"silence" ofType:@"wav"] error:&error];
+		[avc setCurrentItem:silence preservingRate:NO];
+		[avc setCurrentTime:0.0];
+		[avc play:nil];
+		[avc pause];
+//		[avc release];
+/*	[avc setVolume:0.8];
+//	[avc pause];
+*/
+	}
 }
 
 @end

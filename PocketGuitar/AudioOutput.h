@@ -20,6 +20,7 @@ typedef short AudioSample;
 	AudioQueueBufferRef mBuffers[BUFFERS];
 }
 
++ (void)initSystemVolume;
 - (void)start;
 - (void)fillBuffer:(AudioSample*)buffer frames:(int)frames;
 

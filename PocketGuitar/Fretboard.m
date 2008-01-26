@@ -21,7 +21,7 @@
 - (void)loadDefault {
 	_fretCount = 6;
 	_stringCount = 6;
-	_distanceBetweenFrets = 56;
+	_distanceBetweenFrets = 64;
 	_stringMargin = -16;
 	_displayHeight = 320;
 	_displayOffset = 30;
