@@ -2,7 +2,7 @@
 
 - Don't change system volume on startup
 - Added left-handed option
-- Made bass sounds a bit louder - still weak though.
+- Made bass sounds a bit louder, especially for the higher frequency - it's still hard to hear on very small speakers though.
 - Added "Edit Fretboard" setting that where you can adjust the distance between frets, the size of the fretboard and the position of strings.
 - The settings are now stored into disk.
 - Re-implemented exctract_samples script in C so that it no longer requires BSD subsystem.
