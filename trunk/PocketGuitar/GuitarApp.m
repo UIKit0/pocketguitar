@@ -40,7 +40,7 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
     [transition addSubview:guitarView];
 
 	UIPushButton* pushButton = [[UIPushButton alloc] initWithTitle:@"Settings" autosizesToFit:NO];
-	[pushButton setFrame: CGRectMake(0, 0, 100, 30)];
+	[pushButton setFrame: CGRectMake(0, 0, 100, 26)];
 	[pushButton setDrawsShadow: YES];
 	[pushButton setEnabled:YES];  //may not be needed
 	[pushButton setStretchBackground:YES];
