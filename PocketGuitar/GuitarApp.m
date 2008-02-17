@@ -16,8 +16,17 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 
 - (void)applicationDidFinishLaunching:(GSEventRef)event;
 {
-    window = [[UIWindow alloc] initWithContentRect:[UIHardware fullScreenApplicationContentRect]];
+	// hide status bar
+    [UIHardware _setStatusBarHeight:0.0f];
+    [self setStatusBarMode:2 orientation:0 duration:0.0f fenceID:0];
+	
+    CGRect rect = [UIHardware fullScreenApplicationContentRect];
+    rect.origin = CGPointZero;
+    window = [[UIWindow alloc] initWithContentRect:rect];
+	[window orderFront:self];
+    [window makeKey:self];
 	CGRect bounds = [window bounds];
+
 	mainView = [[[UIView alloc] initWithFrame:bounds] autorelease];
     [window setContentView:mainView];
     [mainView setBackgroundColor:(CGColorRef)[(id)GSColorCreateWithDeviceWhite(0.0, 1.0) autorelease]];

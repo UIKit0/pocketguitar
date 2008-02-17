@@ -45,9 +45,7 @@ $(EXTRACT_SAMPLES_ABS): $(APP_ABS)
 $(APP_ABS): $(INFOPLIST_ABS) $(ICON_ABS)
 	mkdir -p $(APP_ABS)
 	cp $(INFOPLIST_ABS) $(APP_ABS)/
-	cp $(addprefix $(SRCROOT)/,icon.png) $(APP_ABS)/
-	cp $(addprefix $(SRCROOT)/,Default.png) $(APP_ABS)/
-	cp $(addprefix $(SRCROOT)/,silence.wav) $(APP_ABS)/
+	cp $(SRCROOT)/*.png $(APP_ABS)/
 
 #$(RAWWAVES_DIR): $(RAWWAVES_SRC)#
 #	mkdir -p $(RAWWAVES_DIR)
