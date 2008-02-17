@@ -1,5 +1,11 @@
 *svn*
 
+- Changed volume slider to native UISliderControl
+- Applied icon by Jonathan A. Zdziarski
+- Applied graphics by Etienne Desclides
+
+*0.2* (2008-01-26)
+
 - Don't change system volume on startup
 - Added left-handed option
 - Made bass sounds a bit louder, especially for the higher frequency - it's still hard to hear on very small speakers though.
