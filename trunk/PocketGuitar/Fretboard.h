@@ -7,8 +7,9 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <GraphicsServices/GraphicsServices.h>
 
-#define DEFAULT_NUT_OFFSET 30
+#define DEFAULT_NUT_OFFSET 36
 #define DRAG_FRET 3
+#define STRING_IMAGES 6
 
 @interface Fretboard : NSObject {
 	int _fretCount;
@@ -18,6 +19,11 @@
 	float _displayHeight;
 	float _displayOffset;
 	CGRect _rect;
+	CGImageRef _fretboardImage;
+	CGImageRef _fretImage;
+	CGImageRef _dotImage;
+	CGImageRef _stringImages[STRING_IMAGES];
+	CGFunctionRef _shadingFunction;
 }
 
 - (id)initWithRect:(CGRect)rect;
