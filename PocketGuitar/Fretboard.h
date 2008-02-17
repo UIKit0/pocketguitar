@@ -18,6 +18,7 @@
 	float _stringMargin;
 	float _displayHeight;
 	float _displayOffset;
+	BOOL _leftHanded;
 	CGRect _rect;
 	CGImageRef _fretboardImage;
 	CGImageRef _fretImage;

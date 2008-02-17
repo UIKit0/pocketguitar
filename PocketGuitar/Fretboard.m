@@ -72,6 +72,7 @@ static CGFunctionRef createShadingFunction() {
 	_stringMargin = -2;
 	_displayHeight = 320;
 	_displayOffset = 43;
+	_leftHanded = NO;
 }
 
 - (int)fretCount {
@@ -143,6 +144,7 @@ static CGFunctionRef createShadingFunction() {
 	if ([defaults stringForKey:@"stringMargin"]) {
 		_stringMargin = [defaults floatForKey:@"stringMargin"];
 	}
+	_leftHanded = [defaults integerForKey:@"leftHanded"];
 	NSLog(@"distance=%f", _distanceBetweenFrets);
 }
 
@@ -234,7 +236,11 @@ static void drawLine(CGContextRef context, float x1, float y1, float x2, float y
 //		drawLine(context, x + 2, Y(_displayOffset), x + 2, Y(size.height));
 
 #endif
-		CGContextDrawImage(context, CGRectMake(x - 2, Y(0), 10, Y(size.height)), _stringImages[i]);
+		int stringIndex = i;
+		if (_leftHanded) {
+			stringIndex = STRING_IMAGES - stringIndex - 1;
+		}
+		CGContextDrawImage(context, CGRectMake(x - 2, Y(0), 10, Y(size.height)), _stringImages[stringIndex]);
 	}
 	CGContextScaleCTM(context, 1.0, Y(1.0));
 }
