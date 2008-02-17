@@ -7,11 +7,11 @@
 	<key>name</key>
 	<string>PocketGuitar</string>
 	<key>version</key>
-	<string>0.2</string>
+	<string>0.2.1</string>
 	<key>location</key>
-	<string>http://podmap.net/apps/zip/PocketGuitar-0.2.zip</string>
+	<string>http://podmap.net/apps/zip/PocketGuitar-0.2.1.zip</string>
 	<key>size</key>
-	<string>2420974</string>
+	<string>2649348</string>
 	<key>url</key>
 	<string>http://code.google.com/p/pocketguitar/</string>
 	<key>description</key>
