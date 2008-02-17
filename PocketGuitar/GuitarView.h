@@ -7,6 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <LayerKit/LayerKit.h>
 #import <UIKit/UIKit.h>
+#import <UIKit/UISliderControl.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <GraphicsServices/GraphicsServices.h>
 
@@ -17,14 +18,14 @@
 
 #import "InstrumentFactory.h"
 
-@class VolumeSliderView;
+//@class VolumeSliderView;
 
 @interface GuitarView : UIView {
 //	Oscillator *oscillators[OSCILLATORS];
 //	Channel *channels[CHANNELS];
 	Finger *fingers[FINGER_SLOTS];
 	Guitar *_guitar;
-	VolumeSliderView *sliderView;
+	UISliderControl *sliderView;
 }
 
 - (int)stringIndexAt:(CGPoint)point;

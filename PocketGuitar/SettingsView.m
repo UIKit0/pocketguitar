@@ -12,6 +12,8 @@
 #import <UIKit/UISwitchControl.h>
 #import <Celestial/AVSystemController.h>
 
+#define POCKETGUITAR_VERSION "0.2.1"
+
 @interface SettingsSubView : UIView {
 	UIPreferencesTable *_table;
 	SettingsView *_parent;
@@ -73,7 +75,9 @@
 	CGSize navSize = [UINavigationBar defaultSize];
 	_textView = [[UITextView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y + navSize.height, frame.size.width, frame.size.height - navSize.height)];
 	NSMutableString *about = [[NSMutableString alloc] init];
-	[about appendString:@"<h3>PocketGuitar 0.2</h3>"];
+	[about appendString:@"<h3>PocketGuitar "];
+	[about appendString:POCKETGUITAR_VERSION];
+	[about appendString:@"</h3>"];
 	[about appendString:@"<div>http://code.google.com/p/pocketguitar/</div>"];
 	[about appendString:@"<div>Copyright (C) 2008 Shinya Kasatani [kasatani at gmail.com]</div>"];
 	[about appendString:@"<hr/>"];

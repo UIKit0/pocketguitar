@@ -49,45 +49,6 @@ struct __GSEvent {
 	struct GSPathPoint points[10];
 };
 
-//static float strings[STRINGS];
-
-@interface VolumeSliderView : UIView {
-	float volume;
-	id delegate;
-}
-@end
-
-@implementation VolumeSliderView
-- (id)initWithFrame:(CGRect)rect andVolume:(float)vol {
-    [super initWithFrame:rect];
-    [self setBackgroundColor:(CGColorRef)[(id)GSColorCreateColorWithDeviceRGBA(1.0f, 0.8f, 0.2f, 0.5f) autorelease]];
-	volume = vol;
-	return self;
-}
-
-- (void)setDelegate:(id)d {
-	delegate = d;
-}
-
-- (void)drawRect:(CGRect)rect;
-{
-	CGContextRef context = UICurrentContext();
-	CGContextClearRect(context, rect);
-	CGContextSetRGBFillColor(context, 1.0, 1.0, 0, 1.0);
-	CGContextFillRect(context, CGRectMake(0, 0, volume * rect.size.width, rect.size.height));
-}
-
-- (void)mouseDragged:(GSEvent *)event {
-	CGPoint point = GSEventGetLocationInWindow(event);
-	CGRect frame = [self frame];
-	volume = (point.x - frame.origin.x) / frame.size.width;
-	if (volume < 0) volume = 0;
-	if (volume > 1) volume = 1;
-	[delegate setVolume:volume];
-	[self setNeedsDisplay];
-}
-
-@end
 
 // --- PluckedString ---
 
@@ -320,11 +281,23 @@ struct __GSEvent {
 		 repeats:YES];
 	[fingerView setEnabledGestures: TRUE];
 
-	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET - 3) andVolume:[_guitar volume]];
-	[sliderView setDelegate:self];
+//	sliderView = [[VolumeSliderView alloc] initWithFrame:CGRectMake(100, 0, rect.size.width - 100, NUT_OFFSET - 3) andVolume:[_guitar volume]];
+	sliderView = [[UISliderControl alloc] initWithFrame:CGRectMake(120, 0, rect.size.width - 140, NUT_OFFSET - 3)];
+    [sliderView setBackgroundColor:(CGColorRef)[(id)GSColorCreateColorWithDeviceRGBA(0.0f, 0.0f, 0.0f, 0.0f) autorelease]];
+//	volume = vol;
+	NSLog(@"init1.5");
+	[sliderView setMinValue:0.0];
+	[sliderView setMaxValue:1.0];
+	[sliderView setValue: [_guitar volume]];
+	[sliderView addTarget:self action:@selector(volumeUpdated) forEvents:1|4]; // mouseDown | mouseDragged
+//	[sliderView setVolumeListener:self];
 	[self addSubview:sliderView];
 
 	return self;
+}
+
+- (void)volumeUpdated {
+	[self setVolume:[sliderView value]];
 }
 
 - (void)scanFingers:(GSEvent *)event {
