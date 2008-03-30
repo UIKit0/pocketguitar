@@ -5,7 +5,6 @@
 
 #define BUFSIZE 8192
 
-NSString *baseDir = @"/var/root/Media/PocketGuitar";
 int extractSamples();
 int convertMp3ToRaw(NSString *from, NSString *to);
 
@@ -20,6 +19,7 @@ int extractSamples() {
 	int ret;
 	mpg123_init();
 	
+	NSString *baseDir = [NSString stringWithFormat:@"%@/Media/PocketGuitar", NSHomeDirectory()];
 	NSFileManager *manager = [NSFileManager defaultManager];
 	NSDirectoryEnumerator *enm = [manager enumeratorAtPath:baseDir];
 	NSString *file, *path;

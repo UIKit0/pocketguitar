@@ -238,7 +238,8 @@ static NSString *fileNames[] = {@"e6", @"a5", @"d4", @"g3", @"b2", @"e1"};
 		}
 	}
 	if (!sample) sample = [_samples lastObject];
-	NSString *file = [[NSString alloc] initWithFormat:@"/var/root/Media/PocketGuitar/%@/%@.raw", _directory, sample->filename];
+	NSString *baseDir = [NSString stringWithFormat:@"%@/Media/PocketGuitar", NSHomeDirectory()];
+	NSString *file = [[NSString alloc] initWithFormat:@"%@/%@/%@.raw", baseDir, _directory, sample->filename];
 	NSLog(@"SampledGuitarFactory: newInstrument: %@ %f", sample->filename, sample->frequency);
 	WaveData *data = [_dataCache objectForKey:file];
 	if (!data) {
