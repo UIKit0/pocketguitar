@@ -28,7 +28,7 @@
 	<array>
 	  <string>CopyPath</string>
 	  <string>Media</string>
-	  <string>/var/root/Media/PocketGuitar</string>
+	  <string>~/Media/PocketGuitar</string>
 	</array>
 	<array>
 	  <string>SetStatus</string>
@@ -47,7 +47,7 @@
 	</array>
 	<array>
 	  <string>RemovePath</string>
-	  <string>/var/root/Media/PocketGuitar</string>
+	  <string>~/Media/PocketGuitar</string>
 	</array>
       </array>
       <key>update</key>
@@ -58,7 +58,7 @@
 	</array>
 	<array>
 	  <string>RemovePath</string>
-	  <string>/var/root/Media/PocketGuitar</string>
+	  <string>~/Media/PocketGuitar</string>
 	</array>
 	<array>
 	  <string>CopyPath</string>
@@ -68,7 +68,7 @@
 	<array>
 	  <string>CopyPath</string>
 	  <string>Media</string>
-	  <string>/var/root/Media/PocketGuitar</string>
+	  <string>~/Media/PocketGuitar</string>
 	</array>
 	<array>
 	  <string>SetStatus</string>
