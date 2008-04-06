@@ -21,45 +21,7 @@ typedef enum {
 } GSFontTrait;
 
 id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
-
-@implementation FretboardEditor
-
-- (void)loadDefault {
-	[_fretboard loadDefault];
-	[self setNeedsDisplay];
-}
-
-- (void)done {
-	[_delegate performSelector:@selector(fretboardEdited)];
-}
-
-- (id)initWithFrame:(CGRect)frame {
-	self = [super initWithFrame:frame];
-	
-	UIPushButton* doneButton = [[UIPushButton alloc] initWithTitle:@"Done" autosizesToFit:NO];
-	[doneButton setFrame: CGRectMake(0, 0, 100, 30)];
-	[doneButton setTitleFont:(struct __GSFont*)GSFontCreateWithName("Helvetica", kGSFontTraitBold, 15.0f)];
-	[doneButton addTarget:self action:@selector(done) forEvents:1];
-	[doneButton setStretchBackground:YES];
-	
-	UIPushButton* defaultButton = [[UIPushButton alloc] initWithTitle:@"Default" autosizesToFit:NO];
-	[defaultButton setFrame: CGRectMake(frame.size.width - 100, 0, 100, 30)];
-	[defaultButton setTitleFont:(struct __GSFont*)GSFontCreateWithName("Helvetica", kGSFontTraitBold, 15.0f)];
-	[defaultButton addTarget:self action:@selector(loadDefault) forEvents:1];
-	[defaultButton setStretchBackground:YES];
-	
-	[self addSubview:doneButton];
-	[self addSubview:defaultButton];
-	return self;
-}
-
-- (void)setDelegate:(id)delegate {
-	_delegate = delegate;
-}
-
-- (void)setFretboard:(Fretboard*)fretboard {
-	_fretboard = fretboard;
-}
+id GSColorCreateColorWithDeviceRGBA(float f1, float f2, float f3, float f4);
 
 static void drawArrowProc(CGContextRef context, float x, float y, float width, float height, 
                           void (moveTo)(CGContextRef context, float x, float y),
@@ -99,15 +61,24 @@ static void drawLine(CGContextRef context, float x1, float y1, float x2, float y
 	CGContextStrokePath(context);
 }
 
+@interface FretboardGuide : UIView {
+}
+@end
+
+@implementation FretboardGuide
+
 - (void)drawRect:(CGRect)rect {
+	FretboardEditor *editor = [self superview];
+	Fretboard *fretboard = [editor fretboard];
+	
 	CGContextRef context = UICurrentContext();
 	CGContextClearRect(context, [self bounds]);
 	CGSize size = ((CGRect) [self bounds]).size;
 	float y;
 	
-	[_fretboard drawRect:rect withContext:context andEnableDrag:YES];
+//	[_fretboard drawRect:rect withContext:context andEnableDrag:YES];
 	
-	y = [_fretboard fretPositionAt:DRAG_FRET];
+	y = [fretboard fretPositionAt:DRAG_FRET];
 	CGContextSetLineWidth(context, 1);
 	CGContextSetRGBFillColor(context, 1.0, 0.3, 0.3, 1);
 	drawArrow(context, 10, y + 10, 50, 50);
@@ -116,20 +87,76 @@ static void drawLine(CGContextRef context, float x1, float y1, float x2, float y
 	CGContextSetLineWidth(context, 4);
 	CGContextSetRGBStrokeColor(context, 0.2, 1, 0.2, 1);
 	CGContextSetRGBFillColor(context, 0.2, 1, 0.2, 1);
-	drawLine(context, 0, [_fretboard displayOffset] + [_fretboard displayHeight], size.width, 
-						[_fretboard displayOffset] + [_fretboard displayHeight]);
+	drawLine(context, 0, [fretboard displayOffset] + [fretboard displayHeight], size.width, 
+						[fretboard displayOffset] + [fretboard displayHeight]);
 
-	y = [_fretboard displayOffset] + [_fretboard displayHeight];
+	y = [fretboard displayOffset] + [fretboard displayHeight];
 	drawArrow(context, 10, y + 10, 50, 50);
 	drawArrow(context, 10, y - 10, 50, -50);
 
 	CGContextSetRGBStrokeColor(context, 1, 1, 0.1, 1);
 	CGContextSetRGBFillColor(context, 1, 1, 0.1, 1);
-	float stringCount = [_fretboard stringCount];
-	float stringMargin = [_fretboard stringMargin];
+	float stringCount = [fretboard stringCount];
+	float stringMargin = [fretboard stringMargin];
 	float x = ((float)(stringCount - 1) + 0.5) / stringCount * (size.width - stringMargin * 2) + stringMargin;
 	drawHorizontalArrow(context, x - 10, 100, -50, 50);
 	drawHorizontalArrow(context, x + 10, 100, 50, 50);
+}
+
+@end
+
+@implementation FretboardEditor
+
+- (void)loadDefault {
+	[_fretboard loadDefault];
+	[_fretboardView reloadFretboard];
+	[_guideView setNeedsDisplay];
+}
+
+- (void)done {
+	[_delegate performSelector:@selector(fretboardEdited)];
+}
+
+- (id)initWithFrame:(CGRect)frame {
+	self = [super initWithFrame:frame];
+	
+	UIPushButton* doneButton = [[UIPushButton alloc] initWithTitle:@"Done" autosizesToFit:NO];
+	[doneButton setFrame: CGRectMake(0, 0, 100, 30)];
+	[doneButton setTitleFont:(struct __GSFont*)GSFontCreateWithName("Helvetica", kGSFontTraitBold, 15.0f)];
+	[doneButton addTarget:self action:@selector(done) forEvents:1];
+	[doneButton setStretchBackground:YES];
+	
+	UIPushButton* defaultButton = [[UIPushButton alloc] initWithTitle:@"Default" autosizesToFit:NO];
+	[defaultButton setFrame: CGRectMake(frame.size.width - 100, 0, 100, 30)];
+	[defaultButton setTitleFont:(struct __GSFont*)GSFontCreateWithName("Helvetica", kGSFontTraitBold, 15.0f)];
+	[defaultButton addTarget:self action:@selector(loadDefault) forEvents:1];
+	[defaultButton setStretchBackground:YES];
+
+	_guideView = [[FretboardGuide alloc] initWithFrame:frame];
+//	[_guideView setIgnoresInteractionEvents:YES];
+	[_guideView setBackgroundColor:(CGColorRef)[(id)GSColorCreateColorWithDeviceRGBA(0.0f, 0.0f, 0.0f, 0.0f) autorelease]];
+	
+	_fretboardView = [[FretboardView alloc] initWithFrame:frame];
+//	[_fretboardView setFretboard:_fretboard];
+	
+	[self addSubview:_fretboardView];
+	[self addSubview:_guideView];
+	[self addSubview:doneButton];
+	[self addSubview:defaultButton];
+	return self;
+}
+
+- (void)setDelegate:(id)delegate {
+	_delegate = delegate;
+}
+
+- (Fretboard*)fretboard {
+	return _fretboard;
+}
+
+- (void)setFretboard:(Fretboard*)fretboard {
+	_fretboard = fretboard;
+	[_fretboardView setFretboard:fretboard];
 }
 
 - (void)mouseDown:(GSEvent *)event {
@@ -177,12 +204,12 @@ static void drawLine(CGContextRef context, float x1, float y1, float x2, float y
 		//float margin = [_fretboard size].width / 2 - [_fretboard stringCount] * stringPoint;
 		//float margin = (stringPoint - 2 * [_fretboard stringCount] * w) / (1 - 4 * [_fretboard stringCount]);
 		float margin = (2 * cp - w) / (2 * ([_fretboard stringCount] - 1));
-		NSLog(@"drag strings %f %f", stringPoint, margin);
 		if (MIN_MARGIN <= margin && margin <= MAX_MARGIN) {
 			[_fretboard setStringMargin:margin];
 		}
 	}
-	[self setNeedsDisplay];
+	[_fretboardView reloadFretboard];
+	[_guideView setNeedsDisplay];
 }
 
 @end

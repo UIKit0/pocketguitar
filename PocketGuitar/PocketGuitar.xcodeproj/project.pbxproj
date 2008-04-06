@@ -16,6 +16,8 @@
 		D553669D0D3106AC00F7514D /* InstrumentFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = InstrumentFactory.mm; sourceTree = "<group>"; };
 		D5536A730D3255C200F7514D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		D55E42220D3268F200994190 /* AudioOutput.m */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.objc; path = AudioOutput.m; sourceTree = "<group>"; usesTabs = 0; };
+		D5B0C5270DA3A74300FD3B51 /* FretboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FretboardView.h; sourceTree = "<group>"; };
+		D5B0C5280DA3A74300FD3B51 /* FretboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FretboardView.m; sourceTree = "<group>"; };
 		D5B2B0CA0D1E2FD70096FA6C /* GuitarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarView.h; sourceTree = "<group>"; };
 		D5B2B0CB0D1E2FD70096FA6C /* GuitarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarView.m; sourceTree = "<group>"; };
 		D5BF52BC0D45619B00098B6E /* extract_samples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = extract_samples.m; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 				D5BF54460D45BB8800098B6E /* FretboardEditor.m */,
 				D5BF544D0D45BBFA00098B6E /* Fretboard.h */,
 				D5BF544E0D45BBFA00098B6E /* Fretboard.m */,
+				D5B0C5270DA3A74300FD3B51 /* FretboardView.h */,
+				D5B0C5280DA3A74300FD3B51 /* FretboardView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

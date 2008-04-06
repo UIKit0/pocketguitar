@@ -8,7 +8,8 @@ SOURCES=\
 	SettingsView.m \
 	InstrumentFactory.mm \
 	Fretboard.m \
-	FretboardEditor.m
+	FretboardEditor.m \
+	FretboardView.m
 
 STK_HOME=/Users/shinya/src/stk-4.3.1
 RAWWAVES_SRC=rawwaves

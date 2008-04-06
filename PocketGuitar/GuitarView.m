@@ -250,9 +250,9 @@ struct __GSEvent {
 	// = (NSRect)rect;
 //	memcpy(&nsr, &rect, sizeof(NSRect));
 //	[sketchView drawRect:nsr withContext:UICurrentContext()];
-	CGContextRef context = UICurrentContext();
-	CGContextClearRect(context, [self bounds]);
-	[[[self guitar] fretboard] drawRect:rect withContext:context andEnableDrag:NO];
+//	CGContextRef context = UICurrentContext();
+//	CGContextClearRect(context, [self bounds]);
+//	[[[self guitar] fretboard] drawRect:rect withContext:context andEnableDrag:NO];
 }
 
 - (void)updateView {
@@ -271,9 +271,15 @@ struct __GSEvent {
 		fingers[i] = [[FingerImpl alloc] init:self];
 	}
 	[_guitar start];
+	
+	_fretboardView = [[FretboardView alloc] initWithFrame:rect];
+	[_fretboardView setFretboard:[_guitar fretboard]];
+	[self addSubview:_fretboardView];
+	
     UIView *fingerView = [[FingerView alloc] initWithFrame:rect];
 	[fingerView setOpaque:FALSE];
     [self addSubview:fingerView];
+	
 	[NSTimer scheduledTimerWithTimeInterval:0.2
 		 target:fingerView
 		 selector:@selector(setNeedsDisplay) 
