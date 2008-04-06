@@ -12,6 +12,7 @@
 #import <GraphicsServices/GraphicsServices.h>
 
 #import "Guitar.h"
+#import "FretboardView.h"
 
 #define FINGER_SLOTS 10
 #define MAX_FRETS 7
@@ -25,6 +26,7 @@
 //	Channel *channels[CHANNELS];
 	Finger *fingers[FINGER_SLOTS];
 	Guitar *_guitar;
+	FretboardView *_fretboardView;
 	UISliderControl *sliderView;
 }
 

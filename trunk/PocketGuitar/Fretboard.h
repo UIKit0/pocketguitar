@@ -20,11 +20,6 @@
 	float _displayOffset;
 	BOOL _leftHanded;
 	CGRect _rect;
-	CGImageRef _fretboardImage;
-	CGImageRef _fretImage;
-	CGImageRef _dotImage;
-	CGImageRef _stringImages[STRING_IMAGES];
-	CGFunctionRef _shadingFunction;
 }
 
 - (id)initWithRect:(CGRect)rect;
@@ -44,8 +39,8 @@
 - (void)reload;
 - (void)save;
 - (void)loadDefault;
-- (void)drawRect:(CGRect)rect withContext:(CGContextRef)context andEnableDrag:(BOOL)drag;
 - (CGSize)size;
 - (void)setStringMargin:(float)margin;
+- (BOOL)leftHanded;
 
 @end

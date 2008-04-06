@@ -10,9 +10,12 @@
 #import <GraphicsServices/GraphicsServices.h>
 
 #import "Fretboard.h"
+#import "FretboardView.h"
 
 @interface FretboardEditor : UIView {
 	Fretboard *_fretboard;
+	FretboardView *_fretboardView;
+	UIView *_guideView;
 	BOOL _draggingFrets;
 	BOOL _draggingFretEnd;
 	BOOL _draggingStrings;
@@ -20,6 +23,7 @@
 	id _delegate;
 }
 
+- (Fretboard*)fretboard;
 - (void)setFretboard:(Fretboard *)fretboard;
 - (void)setDelegate:(id)delegate;
 @end
