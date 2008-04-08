@@ -80,6 +80,7 @@
 	[about appendString:@"</h3>"];
 	[about appendString:@"<div>http://code.google.com/p/pocketguitar/</div>"];
 	[about appendString:@"<div>Copyright (C) 2008 Shinya Kasatani [kasatani at gmail.com]</div>"];
+	// TODO credits
 	[about appendString:@"<hr/>"];
 	[about appendString:@"<div>PocketGuitar uses following sample packs from the Freesound Project: http://freesound.iua.upf.edu/. These samples are licensed under Creative Commons Sampling Plus 1.0 license.</div>"];
 	[about appendString:@"<ul>"];

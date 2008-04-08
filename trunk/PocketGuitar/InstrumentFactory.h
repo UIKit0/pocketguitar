@@ -4,7 +4,7 @@
 //  Created by shinya on 08/01/06.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 #ifndef STK_VOICER_H
 @class Instrmnt;

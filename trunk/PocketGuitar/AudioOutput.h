@@ -4,7 +4,7 @@
 //  Created by shinya on 07/12/23.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 #import "AudioQueue.h"
 

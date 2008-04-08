@@ -1,3 +1,16 @@
+ifeq ($(strip $(PRODUCT_NAME)),)
+PRODUCT_NAME:=PocketGuitar
+endif
+ifeq ($(strip $(SRCROOT)),)
+SRCROOT=.
+endif
+ifeq ($(strip $(BUILT_PRODUCTS_DIR)),)
+BUILT_PRODUCTS_DIR=./build/Release
+endif
+ifeq ($(strip $(CONFIGURATION_TEMP_DIR)),)
+CONFIGURATION_TEMP_DIR=./build/tmp
+endif
+
 INFOPLIST_FILE=Info.plist
 SOURCES=\
 	main.m \
@@ -11,13 +24,13 @@ SOURCES=\
 	FretboardEditor.m \
 	FretboardView.m
 
-STK_HOME=/Users/shinya/src/stk-4.3.1
+STK_HOME=../stk-4.3.1
 RAWWAVES_SRC=rawwaves
 CC=/usr/local/bin/arm-apple-darwin-gcc
 CPP=/usr/local/bin/arm-apple-darwin-cpp
 CFLAGS=-g -O2 -lobjc -framework CoreFoundation -framework Foundation -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
 LD=$(CC)
-LDFLAGS=-Wl -lstdc++ -lobjc -ObjC -framework MobileMusicPlayer -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial
+LDFLAGS=-Wl -lstdc++.6 -lgcc_eh -lobjc -ObjC -framework MobileMusicPlayer -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial
 WRAPPER_NAME=$(PRODUCT_NAME).app
 EXECUTABLE_NAME=$(PRODUCT_NAME)
 SOURCES_ABS=$(addprefix $(SRCROOT)/,$(SOURCES))

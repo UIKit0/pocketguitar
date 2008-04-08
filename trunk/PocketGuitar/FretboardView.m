@@ -127,6 +127,8 @@ static NSString *stringImageFiles[] = {
 		_stringViews[i] = stringView;
 	}
 	
+	// TODO dots
+	
 	return self;
 }
 

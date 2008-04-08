@@ -1,6 +1,48 @@
-Building PocketGuitar:
+Building your own PocketGuitar
+==============================
 
-- Copy AudioQueue.h in Leopard to this directory. (My build environment for iPhone is Tiger)
-- Open PocketGuitar.xcodeproj with XCode and build it.
-- ./convert_waves.sh
-- ./package.sh
+*Preparing build environment
+
+Download iPhoneToolchain VMware Image from here, and run it in your VMware.
+ftp://ftp.iphonefix.de/iPhoneToolchain%20VMWare%20Image/V2/
+
+Log in as "toolchain" user, and checkout the source code into /PROJECTS/PocketGuitar.
+Copy AudioQueue.h included in XCode 3.x into the source directory, and insert following line into the beginning of this file:
+#define AVAILABLE_MAC_OS_X_VERSION_10_5_AND_LATER
+
+The compilation will fail when using the default headers in iPhoneToolchain VMware Image V2, so here's a hack to make the build pass:
+
+# mkdir -p /usr/local/arm-apple-darwin/include/Frameworks/CarbonCore.framework
+# cd /usr/local/arm-apple-darwin/include/Frameworks/CarbonCore.framework
+# ln -s ../../CarbonCore Headers
+
+*Building mpg123
+
+Download mpg123-1.4.0 from http://www.mpg123.de/
+
+ CFLAGS=-DNDEBUG ./configure --prefix=/usr/local/arm-apple-darwin --host=arm-apple-darwin --enable-static=yes --enable-shared=no
+ make
+ su
+ make install
+
+*Building STK
+
+Download STK from http://ccrma.stanford.edu/software/stk/ and extract source code into /PROJECTS/stk-x.x.x
+
+ ./configure --host=arm-apple-darwin --disable-realtime
+ cd src; make
+ cp libstk.a ../../PocketGuitar/
+
+*Compiling PocketGuitar
+
+Now you should be able to compile the source using "make".
+
+*Converting .wav files into .mp3
+
+Download LAME from http://lame.sourceforge.net/index.php and install it using standard "./configure && make && sudo make install".
+
+./convert_waves.sh
+
+*Creating release package
+
+./package.sh
