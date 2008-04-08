@@ -164,12 +164,12 @@ static void drawLine(CGContextRef context, float x1, float y1, float x2, float y
 	float fretEndPos = [_fretboard pickupOffset];
 	float dragFretPos = [_fretboard fretPositionAt:3];
 	float lastStringPos = [_fretboard stringPositionAt:[_fretboard stringCount] - 1];
-	if (fabs(fretEndPos - point.y) <= DRAG_HANDLE_SIZE) {
-		_draggingFretEnd = YES;
-		_dragOffset = fretEndPos - point.y;
-	} else if (fabs(dragFretPos - point.y) <= DRAG_HANDLE_SIZE) {
+	if (fabs(dragFretPos - point.y) <= DRAG_HANDLE_SIZE) {
 		_draggingFrets = YES;
 		_dragOffset = dragFretPos - point.y;
+	} else if (fabs(fretEndPos - point.y) <= DRAG_HANDLE_SIZE) {
+		_draggingFretEnd = YES;
+		_dragOffset = fretEndPos - point.y;
 	} else if (fabs(lastStringPos - point.x) <= DRAG_HANDLE_SIZE) {
 		_draggingStrings = YES;
 		_dragOffset = lastStringPos - point.x;
@@ -187,22 +187,18 @@ static void drawLine(CGContextRef context, float x1, float y1, float x2, float y
 	if (_draggingFretEnd) {
 		float pos = point.y + _dragOffset;
 		float dragFretPos = [_fretboard fretPositionAt:DRAG_FRET];
-		if (MIN_FRET_END <= pos && pos <= MAX_FRET_END && dragFretPos + DRAG_HANDLE_SIZE < pos) {
+		if (MIN_FRET_END <= pos && pos <= MAX_FRET_END && dragFretPos < pos) {
 			[_fretboard setDisplayHeight:(pos - [_fretboard displayOffset])];
 		}
 	} else if (_draggingFrets) {
 		float dist = (point.y - [_fretboard displayOffset]) + _dragOffset;
-		if (MIN_FRET_SIZE * 3 <= dist && dist <= [_fretboard displayHeight] - 30) {
+		if (MIN_FRET_SIZE * 3 <= dist && dist <= [_fretboard displayHeight]) {
 			[_fretboard setDistanceBetweenFrets:(dist / 3)];
 		}
 	} else if (_draggingStrings) {
 		float stringPoint = [_fretboard size].width - (point.x + _dragOffset);
 		float cp = stringPoint * [_fretboard stringCount];
 		float w = [_fretboard size].width;
-		//float margin = (w - cp) / (2 - 4 * [_fretboard stringCount]);
-		//float margin = (2 * cp - w) / (cp - 2);
-		//float margin = [_fretboard size].width / 2 - [_fretboard stringCount] * stringPoint;
-		//float margin = (stringPoint - 2 * [_fretboard stringCount] * w) / (1 - 4 * [_fretboard stringCount]);
 		float margin = (2 * cp - w) / (2 * ([_fretboard stringCount] - 1));
 		if (MIN_MARGIN <= margin && margin <= MAX_MARGIN) {
 			[_fretboard setStringMargin:margin];
