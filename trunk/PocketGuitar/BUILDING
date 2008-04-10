@@ -30,8 +30,9 @@ Download mpg123-1.4.0 from http://www.mpg123.de/
 Download STK from http://ccrma.stanford.edu/software/stk/ and extract source code into /PROJECTS/stk-x.x.x
 
  ./configure --host=arm-apple-darwin --disable-realtime
- cd src; make
- cp libstk.a ../../PocketGuitar/
+ cd src
+ make
+ arm-apple-darwin-ar -s libstk.a
 
 *Compiling PocketGuitar
 
