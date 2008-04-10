@@ -36,5 +36,6 @@
 - (float)fretPositionAt:(int)index;
 - (void)scanFingers:(GSEvent *)event;
 - (Guitar*)guitar;
+- (void)reload;
 
 @end
