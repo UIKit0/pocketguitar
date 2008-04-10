@@ -255,8 +255,9 @@ struct __GSEvent {
 //	[[[self guitar] fretboard] drawRect:rect withContext:context andEnableDrag:NO];
 }
 
-- (void)updateView {
-//	[self setNeedsDisplay];
+- (void)reload {
+	[_fretboardView reloadFretboard];
+	[self setNeedsDisplay];
 }
 
 - (void)setVolume:(float)v {

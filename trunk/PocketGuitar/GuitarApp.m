@@ -65,7 +65,7 @@ id GSFontCreateWithName(char *name, GSFontTrait traits, float size);
 - (void)settingsSaved {
 	NSLog(@"settingsSaved %@", guitarView);
 	[[guitarView guitar] reloadSettings];
-	[guitarView setNeedsDisplay];
+	[guitarView reload];
 	[transition transition:2 fromView:settingsView toView:guitarView];
 }
 
