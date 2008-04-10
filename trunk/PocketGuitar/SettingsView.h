@@ -19,6 +19,7 @@
 @class FretboardEditor;
 @class Fretboard;
 @class Guitar;
+@class AboutView;
 
 @interface SettingsView : UITransitionView {
 	MainSettingsView *mainView;
@@ -27,7 +28,7 @@
 	InstrumentsView *instrumentsView;
 	FretboardEditor *fretboardEditor;
 	Guitar *_guitar;
-	UIView *aboutView;
+	AboutView *aboutView;
 	id delegate;
 }
 

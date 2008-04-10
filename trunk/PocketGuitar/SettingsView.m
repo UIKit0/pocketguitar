@@ -10,6 +10,7 @@
 
 #import <UIKit/CDStructures.h>
 #import <UIKit/UISwitchControl.h>
+#import <UIKit/UIWebView.h>
 #import <Celestial/AVSystemController.h>
 
 #define POCKETGUITAR_VERSION @"0.2.1"
@@ -65,7 +66,8 @@
 @end
 
 @interface AboutView : SettingsSubView {
-	UITextView *_textView;
+	UIWebView *_textView;
+	BOOL _loaded;
 }
 @end
 
@@ -73,26 +75,8 @@
 -(id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame backTitle:@"Settings"];
 	CGSize navSize = [UINavigationBar defaultSize];
-	_textView = [[UITextView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y + navSize.height, frame.size.width, frame.size.height - navSize.height)];
-	NSMutableString *about = [[NSMutableString alloc] init];
-	[about appendString:@"<h3>PocketGuitar "];
-	[about appendString:POCKETGUITAR_VERSION];
-	[about appendString:@"</h3>"];
-	[about appendString:@"<div>http://code.google.com/p/pocketguitar/</div>"];
-	[about appendString:@"<div>Copyright (C) 2008 Shinya Kasatani [kasatani at gmail.com]</div>"];
-	// TODO credits
-	[about appendString:@"<hr/>"];
-	[about appendString:@"<div>PocketGuitar uses following sample packs from the Freesound Project: http://freesound.iua.upf.edu/. These samples are licensed under Creative Commons Sampling Plus 1.0 license.</div>"];
-	[about appendString:@"<ul>"];
-	[about appendString:@"<li>\"Distorted Guitar Single Notes\" by SpeedY</li>"];
-	[about appendString:@"<li>\"AcousticElectricGuitarOpenStrings\" by casualdave</li>"];
-	[about appendString:@"<li>\"Old Fender P-Bass\" by Corsica_S</li>"];
-	[about appendString:@"</ul>"];
-	[about appendString:@"<hr/>"];
-	[about appendString:@"<div>PocketGuitar uses The Synthesis ToolKit in C++ (STK) by Perry R. Cook and Gary P. Scavone: http://ccrma.stanford.edu/software/stk/"];
-	[_textView setHTML:about];
-	[_textView setEditable:NO];
-	[_textView setTextSize:13];
+	_textView = [[UIWebView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y + navSize.height, frame.size.width, frame.size.height - navSize.height)];
+	[[_textView webView] performSelector:@selector(setPolicyDelegate:) withObject:self];
 	[self addSubview:_textView];
 	NSLog(@"init about");
 	return self;
@@ -102,6 +86,27 @@
 	[[self parent] closeAbout];
 	NSLog(@"closeAbout");
 }
+
+- (void)loadHTML {
+	if (!_loaded) {
+		_loaded = YES;
+		NSURL *url = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"about" ofType:@"html"]];
+		NSURLRequest *req = [NSURLRequest requestWithURL:url];
+		[_textView loadRequest:req];
+	}
+}
+
+- (void)webView:(WebView*)webView decidePolicyForNavigationAction:(NSDictionary*)actionInformation request:(NSURLRequest*)request frame:(WebFrame*)frame decisionListener:(id)listener {
+	NSURL *url = [actionInformation objectForKey:@"WebActionOriginalURLKey"];
+	NSLog(@"navigating to %@", url);
+	if ([url isFileURL]) {
+		[listener performSelector:@selector(use)];
+	} else {
+		[listener performSelector:@selector(ignore)];
+		[UIApp openURL:url asPanel:YES];
+	}
+}
+
 @end
 
 @interface InstrumentsView : SettingsSubView {
@@ -377,6 +382,7 @@
 
 
 - (void)about {
+	[aboutView loadHTML];
 	[self transition:1 toView:aboutView];
 }
 

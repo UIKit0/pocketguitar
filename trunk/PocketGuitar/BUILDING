@@ -16,6 +16,8 @@ The compilation will fail when using the default headers in iPhoneToolchain VMwa
 # cd /usr/local/arm-apple-darwin/include/Frameworks/CarbonCore.framework
 # ln -s ../../CarbonCore Headers
 
+Fix UIKit/UIWebView.h using this patch: http://mobiletextedit.googlecode.com/svn/trunk/uikit.patch.txt
+
 *Building mpg123
 
 Download mpg123-1.4.0 from http://www.mpg123.de/

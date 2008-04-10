@@ -59,6 +59,7 @@ $(EXTRACT_SAMPLES_ABS): $(APP_ABS)
 $(APP_ABS): $(INFOPLIST_ABS) $(ICON_ABS)
 	mkdir -p $(APP_ABS)
 	cp $(INFOPLIST_ABS) $(APP_ABS)/
+	cp about.html $(APP_ABS)/
 	cp $(SRCROOT)/Images/*.png $(APP_ABS)/
 
 #$(RAWWAVES_DIR): $(RAWWAVES_SRC)#
