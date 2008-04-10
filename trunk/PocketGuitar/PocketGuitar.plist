@@ -13,7 +13,7 @@
     <key>description</key>
     <string>A virtual guitar app.</string>
     <key>location</key>
-    <string>http://podmap.net/apps/zip/PocketGuitar-0.2.1.zip</string>
+    <string>http://podmap.net/apps/zip/PocketGuitar-0.3.zip</string>
     <key>name</key>
     <string>PocketGuitar</string>
     <key>scripts</key>
@@ -81,10 +81,10 @@
       </array>
     </dict>
     <key>size</key>
-    <string>2649367</string>
+    <string>2643728</string>
     <key>url</key>
-    <string>http://www.modmyifone.com/info/pocketguitar.html</string>
+    <string>http://code.google.com/p/pocketguitar/</string>
     <key>version</key>
-    <string>0.2.1</string>
+    <string>0.3</string>
   </dict>
 </plist>

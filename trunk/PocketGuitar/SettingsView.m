@@ -13,8 +13,6 @@
 #import <UIKit/UIWebView.h>
 #import <Celestial/AVSystemController.h>
 
-#define POCKETGUITAR_VERSION @"0.2.1"
-
 @interface SettingsSubView : UIView {
 	UIPreferencesTable *_table;
 	SettingsView *_parent;

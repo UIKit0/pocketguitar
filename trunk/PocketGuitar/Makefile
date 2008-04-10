@@ -28,9 +28,10 @@ STK_HOME=../stk-4.3.1
 RAWWAVES_SRC=rawwaves
 CC=/usr/local/bin/arm-apple-darwin-gcc
 CPP=/usr/local/bin/arm-apple-darwin-cpp
-CFLAGS=-g -O2 -lobjc -lmpg123 -framework CoreFoundation -framework Foundation -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
+CFLAGS=-g -O2 -mfpu=vfp -Wall -D__IPHONE__ -I$(STK_HOME)/include -I/usr/local/arm-apple-darwin/include
 LD=$(CC)
-LDFLAGS=-Wl -lstdc++.6 -lgcc_eh -lobjc -ObjC -lmpg123 -framework MobileMusicPlayer -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial
+LIBS=-lstdc++.6 -lgcc_eh -lobjc -ObjC -lmpg123 -framework MobileMusicPlayer -framework CoreFoundation -framework Foundation -framework CoreGraphics -framework GraphicsServices -framework UIKit -framework LayerKit -framework CoreAudio -framework AudioToolbox -framework Celestial
+LDFLAGS=-Wl $(LIBS)
 WRAPPER_NAME=$(PRODUCT_NAME).app
 EXECUTABLE_NAME=$(PRODUCT_NAME)
 SOURCES_ABS=$(addprefix $(SRCROOT)/,$(SOURCES))
@@ -54,7 +55,7 @@ $(PRODUCT_ABS): $(APP_ABS) $(OBJECTS_ABS)
 	$(LD) $(LDFLAGS) -o $(PRODUCT_ABS) $(OBJECTS_ABS) $(STK_HOME)/src/libstk.a
 
 $(EXTRACT_SAMPLES_ABS): $(APP_ABS)
-	$(CC) $(CFLAGS) -o $(EXTRACT_SAMPLES_ABS) extract_samples.m
+	$(CC) $(CFLAGS) $(LIBS) -o $(EXTRACT_SAMPLES_ABS) extract_samples.m
 
 $(APP_ABS): $(INFOPLIST_ABS) $(ICON_ABS)
 	mkdir -p $(APP_ABS)
