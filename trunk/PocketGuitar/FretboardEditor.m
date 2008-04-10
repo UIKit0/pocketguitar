@@ -5,7 +5,7 @@
 
 #import "FretboardEditor.h"
 
-#define MIN_FRET_SIZE 10
+#define MIN_FRET_SIZE 30
 #define MIN_FRET_END 300
 #define MAX_FRET_END 450
 #define MIN_MARGIN -50

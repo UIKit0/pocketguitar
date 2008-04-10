@@ -123,6 +123,13 @@ static NSString *stringImageFiles[] = {
 		_fretViews[i] = fretView;
 	}
 	
+	UIImage *dotImage = [UIImage imageNamed:@"dot.png"];
+	for (i = 0; i < VIEW_MAX_DOTS; i++) {
+		UIImageView *dotView = [[UIImageView alloc] initWithImage:dotImage];
+		[self addSubview:dotView];
+		_dotViews[i] = dotView;
+	}
+	
 	_shadingView = [[FretboardShadingView alloc] initWithFrame:rect];
 	[_shadingView setBackgroundColor:(CGColorRef)[(id)GSColorCreateColorWithDeviceRGBA(0.0f, 0.0f, 0.0f, 0.0f) autorelease]];
 	[self addSubview:_shadingView];
@@ -134,13 +141,6 @@ static NSString *stringImageFiles[] = {
 		_stringViews[i] = stringView;
 	}
 
-	UIImage *dotImage = [UIImage imageNamed:@"dot.png"];
-	for (i = 0; i < VIEW_MAX_DOTS; i++) {
-		UIImageView *dotView = [[UIImageView alloc] initWithImage:dotImage];
-		[self addSubview:dotView];
-		_dotViews[i] = dotView;
-	}
-	
 	return self;
 }
 
