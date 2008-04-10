@@ -11,11 +11,13 @@
 #import "Fretboard.h"
 
 #define VIEW_MAX_FRETS 12
+#define VIEW_MAX_DOTS 4
 
 @interface FretboardView : UIView {
 	Fretboard *_fretboard;
 	UIImageView *_fretViews[VIEW_MAX_FRETS];
 	UIImageView *_stringViews[STRING_IMAGES];
+	UIImageView *_dotViews[VIEW_MAX_DOTS];
 	UIView *_shadingView;
 	UIImageView *_backgroundView;
 }

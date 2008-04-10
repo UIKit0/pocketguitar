@@ -66,6 +66,8 @@ static CGFunctionRef createShadingFunction() {
 	[self reloadFretboard];
 }
 
+const int dotFrets[] = {3, 5, 7, 9};
+
 - (void)reloadFretboard {
 	int i;
 	for (i = 0; i < VIEW_MAX_FRETS; i++) {
@@ -73,6 +75,11 @@ static CGFunctionRef createShadingFunction() {
 		[_fretViews[i] setFrame:CGRectMake(0, y - 25, 320, 48)];
 	}
 
+	for (i = 0; i < VIEW_MAX_DOTS; i++) {
+		int y = [_fretboard fretPositionAt:dotFrets[i]];
+		[_dotViews[i] setFrame:CGRectMake(320 / 2 - 10, y - [_fretboard distanceBetweenFrets] / 2 - 14, 23, 24)];
+	}
+	
 	[_shadingView setFrame:CGRectMake(0, [_fretboard pickupOffset], 320, 200)];
 	
 	for (i = 0; i < [_fretboard stringCount]; i++) {
@@ -111,7 +118,7 @@ static NSString *stringImageFiles[] = {
 	UIImage *fretImage = [UIImage imageNamed:@"fret.png"];
 	int i;
 	for (i = 0; i < VIEW_MAX_FRETS; i++) {
-		UIImageView *fretView = [[UIImageView alloc] initWithImage: fretImage];
+		UIImageView *fretView = [[UIImageView alloc] initWithImage:fretImage];
 		[self addSubview:fretView];
 		_fretViews[i] = fretView;
 	}
@@ -126,8 +133,13 @@ static NSString *stringImageFiles[] = {
 		[self addSubview:stringView];
 		_stringViews[i] = stringView;
 	}
-	
-	// TODO dots
+
+	UIImage *dotImage = [UIImage imageNamed:@"dot.png"];
+	for (i = 0; i < VIEW_MAX_DOTS; i++) {
+		UIImageView *dotView = [[UIImageView alloc] initWithImage:dotImage];
+		[self addSubview:dotView];
+		_dotViews[i] = dotView;
+	}
 	
 	return self;
 }

@@ -31,6 +31,7 @@
 - (float)displayHeight;
 - (float)displayOffset;
 - (float)pickupOffset;
+- (float)distanceBetweenFrets;
 - (float)fretFromPosition:(float)position;
 - (float)stringFromPosition:(float)position;
 - (int)stringIndexFromPosition:(float)position;

@@ -119,4 +119,8 @@
 	return _rect.size;
 }
 
+- (float)distanceBetweenFrets {
+	return _distanceBetweenFrets;
+}
+
 @end
