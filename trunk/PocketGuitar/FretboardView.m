@@ -71,7 +71,7 @@ const int dotFrets[] = {3, 5, 7, 9};
 - (void)reloadFretboard {
 	int i;
 	for (i = 0; i < VIEW_MAX_FRETS; i++) {
-		int y = [_fretboard fretPositionAt:i];
+		int y = [_fretboard fretPositionAt:(i+1)];
 		[_fretViews[i] setFrame:CGRectMake(0, y - 25, 320, 48)];
 	}
 
